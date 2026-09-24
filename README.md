@@ -1,59 +1,82 @@
-# AtlasGrid — cellule de crise MIRAGE
+<div align="center">
 
-> Exercice pédagogique fictif KASBAH. Aucune donnée réelle n'est présente dans ce dépôt.
+# AtlasGrid — Cellule de crise MIRAGE
 
-Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fausses pistes, décisions, cartographie du système d'information, chronologie et préparation des livrables de jury.
+**Dossier d'incident • Exercice KASBAH • AtlasGrid, entreprise fictive**
 
-## Point de situation
+[Accéder à la chronologie](CHRONOLOGIE_PREUVES.md) · [Voir les preuves](preuves_retenues/) · [Préparer la cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md)
 
-- **Incident :** ransomware MIRAGE.
-- **Impact confirmé :** 23 serveurs chiffrés sur 40, incluant la paie, la facturation, l'ERP et les partages de fichiers.
-- **Exfiltration objectivée :** 117,8 Go vers une infrastructure externe.
-- **Données :** SIROCCO publie un échantillon de données clients et contractuelles ; le volume de 300 Go revendiqué n'est pas confirmé.
-- **Éléments qualifiés :** 12 preuves, 8 fausses pistes et 7 bruits.
+</div>
 
-## Commencer ici
+> **Cadre pédagogique.** Ce dépôt reconstitue la gestion d'un incident cyber fictif. Il ne contient aucune donnée réelle.
 
-| Objectif | Document de référence |
-|---|---|
-| Construire la cartographie du SI | [Brief de cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md) |
-| Comprendre les systèmes et dépendances | [Référence cartographie](cartographie_SI/REFERENCE_CARTOGRAPHIE_SI.md) |
-| Reconstituer l'attaque | [Chronologie des preuves](CHRONOLOGIE_PREUVES.md) |
-| Revoir tous les événements de l'exercice | [Fiche de chronologie complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md) |
-| Consulter la synthèse de crise | [Mémoire de crise MIRAGE](MEMOIRE_INCIDENT_MIRAGE.md) |
+## En un regard
 
-## Organisation du dépôt
+| Incident | Impact confirmé | Données | État du dossier |
+|---|---|---|---|
+| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | **12** preuves · **8** fausses pistes · **7** bruits |
 
-| Dossier | Contenu |
-|---|---|
-| [`preuves_retenues/`](preuves_retenues/) | Les 12 captures qualifiées comme preuves, leurs fiches d'argumentation et le protocole de conservation. |
-| [`fausses_pistes/`](fausses_pistes/) | Les 8 pistes examinées puis écartées, leurs fiches de qualification et leur méthode d'analyse. |
-| [`bruits/`](bruits/) | Les 7 signaux sans lien établi avec MIRAGE, leurs fiches de triage et leur méthode de qualification. |
-| [`decisions/`](decisions/) | Les 8 captures de décision, leurs fiches d'argumentation et les références de conformité. |
-| [`chronologie_complete/`](chronologie_complete/) | La fiche de chronologie complète et la galerie de toutes les captures. |
-| [`cartographie_SI/`](cartographie_SI/) | Le dossier de prise de poste, l'inventaire et le brief de production de la cartographie. |
-| [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, fiches visuelles, notes de décision et informations complètes du fil. |
-| [`assets/captures/`](assets/captures/) | Source unique des captures, classées par contexte, preuve, fausse piste, bruit et décision. |
+**Services touchés :** paie, facturation, ERP et partages de fichiers.<br>
+**Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.
 
-## Les six pôles
+## Démarrer ici
 
-- **SOC / Détection** : qualification des signaux et chronologie de l'incident.
-- **Forensic** : hypothèses d'attaque et analyse des traces.
-- **Risque / Conformité** : risques, obligations de notification et assurance.
-- **Continuité d'activité** : actifs critiques, containment et reprise.
-- **Communication** : salariés, clients et presse.
-- **Direction** : arbitrages, rapport d'incident et plan 30/60/90 jours.
+1. **Comprendre l'incident** — lire le [mémoire de crise](MEMOIRE_INCIDENT_MIRAGE.md).
+2. **Suivre la chaîne d'attaque** — consulter la [chronologie des preuves](CHRONOLOGIE_PREUVES.md).
+3. **Préparer les rendus** — utiliser le [brief de cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md), les fiches et les décisions ci-dessous.
 
-Chaque pôle possède un fichier `NOTE_POLE.md` et une transcription source dans `INFORMATIONS_DU_FIL_COMPLET.txt`.
+## Chaîne d'attaque confirmée
 
-## Livrables à finaliser
+| Moment | Événement établi | Pièces principales |
+|---|---|---|
+| J-21 à J-1 | Utilisation anormale du compte VPN `svc_oasisnet` | A-02, A-10 |
+| J-11 | Création de la règle sortante `OUT-TEMP-443` | A-09 |
+| J-10 à J-1 | Exfiltration de 117,8 Go vers une infrastructure externe | A-03 |
+| J-3 | Sabotage de la rétention des sauvegardes | A-05 |
+| J-1 · 03:12 | Détection et chiffrement MIRAGE sur FIN-112 | A-01, A-04, A-12 |
+| J2 | Publication d'un échantillon sur SIROCCO | A-07 |
 
-1. Cartographie du SI : une page, zones, dépendances, actifs vitaux et éléments touchés.
-2. Communiqué de crise : une page, faits prouvés uniquement.
-3. Chronologie d'incident : tableau avec date, heure, pièce, verdict et décision.
-4. Plan de remédiation 30/60/90 jours : action, responsable, échéance, risque couvert et indicateur.
-5. Présentation finale : 10 à 15 minutes, six porte-parole, format recommandé « rapport d'incident ».
+> La chronologie complète distingue les faits confirmés, les hypothèses, les fausses pistes et le bruit : [ouvrir la fiche complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md).
 
-## Règle de travail
+## Explorer le dossier
 
-Chaque affirmation doit renvoyer à une pièce. Les faits confirmés, les hypothèses, les fausses pistes et les bruits ne doivent jamais être confondus.
+| Besoin | Où aller | Ce que vous y trouverez |
+|---|---|---|
+| Établir les faits | [preuves_retenues/](preuves_retenues/) | 12 fiches de preuve, leurs captures et leur argumentation. |
+| Comprendre ce qui a été écarté | [fausses_pistes/](fausses_pistes/) · [bruits/](bruits/) | Les signaux étudiés, leur vérification et leur verdict. |
+| Justifier les arbitrages | [decisions/](decisions/) | 8 décisions de crise, leurs captures et leur base de conformité. |
+| Retracer tout l'exercice | [chronologie_complete/](chronologie_complete/) | Fiche détaillée et galerie des captures. |
+| Construire la cartographie | [cartographie_SI/](cartographie_SI/) | Inventaire, consignes et dépendances du SI. |
+| Travailler par responsabilité | [poles_cellule/](poles_cellule/) | Les six pôles, leurs notes et leurs éléments utiles. |
+| Retrouver une capture | [assets/captures/](assets/captures/) | Source unique des captures, classées par nature. |
+
+## Les 6 pôles de la cellule
+
+| Pôle | Responsabilité | Livrable attendu |
+|---|---|---|
+| SOC / Détection | Qualifier les signaux et tenir la main courante | Chronologie de l'incident |
+| Forensic | Reconstituer le mode opératoire à partir des traces | Hypothèses d'attaque argumentées |
+| Risque / Conformité | Évaluer les risques et obligations | Tableau de risques |
+| Continuité d'activité | Préserver les services critiques et organiser la reprise | Plan de containment |
+| Communication | Gérer les messages internes, clients et presse | Communiqué et réponses |
+| Direction | Arbitrer, prioriser et porter la restitution | Rapport d'incident et plan 30 / 60 / 90 jours |
+
+## Livrables du jury
+
+- **Cartographie simplifiée du SI** : zones, dépendances, actifs critiques et éléments affectés.
+- **Chronologie d'incident** : date, heure, pièce A-xx, qualification et décision associée.
+- **Communiqué de crise** : une page, uniquement à partir de faits confirmés.
+- **Plan 30 / 60 / 90 jours** : action, responsable, échéance, risque couvert et indicateur.
+- **Présentation finale** : 10 à 15 minutes, portée par les six pôles sous la forme d'un rapport d'incident.
+
+## Règle essentielle
+
+Chaque affirmation doit renvoyer à une pièce. Une **preuve**, une **hypothèse**, une **fausse piste** et un **bruit** sont quatre statuts différents : ils ne doivent jamais être confondus.
+
+---
+
+<div align="center">
+
+**AtlasGrid · MIRAGE · Exercice KASBAH**
+
+</div>
