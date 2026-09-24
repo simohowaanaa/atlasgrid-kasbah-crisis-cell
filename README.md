@@ -34,7 +34,7 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 | [`decisions/`](decisions/) | Les 8 captures de décision, leurs fiches d'argumentation et les références de conformité. |
 | [`chronologie_complete/`](chronologie_complete/) | La fiche de chronologie complète et la galerie de toutes les captures. |
 | [`cartographie_SI/`](cartographie_SI/) | Le dossier de prise de poste, l'inventaire et le brief de production de la cartographie. |
-| [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, notes de décision et informations complètes du fil. |
+| [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, fiches visuelles, notes de décision et informations complètes du fil. |
 | [`presentations/`](presentations/) | Les supports HTML, leurs consignes et le plan de travail. |
 | [`capture/`](capture/) | L'archive complète des captures, renommées et numérotées. |
 
