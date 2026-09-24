@@ -1,16 +1,8 @@
 <div align="center">
 
-<table align="center" cellpadding="10">
-  <tr>
-    <td align="center" bgcolor="#FFFFFF">
-      <img src="assets/logos/emsi.png" alt="EMSI" height="64">
-    </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td align="center" bgcolor="#FFFFFF">
-      <img src="assets/logos/cybersup.png" alt="CyberSup" height="64">
-    </td>
-  </tr>
-</table>
+<p>
+  <img src="assets/logos/organisateurs.png" alt="EMSI et CyberSup, organisateurs de l'exercice" width="640">
+</p>
 
 # AtlasGrid — Cellule de crise MIRAGE
 
