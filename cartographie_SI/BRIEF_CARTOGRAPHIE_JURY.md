@@ -4,7 +4,46 @@
 
 **But :** produire une page qui permet au jury de voir immédiatement les zones du SI, les dépendances, les actifs vitaux, les éléments touchés et les accès à risque. Ce brief reprend les informations nécessaires à la production du schéma sans nécessiter de relire le fil de crise.
 
-## 1. Format du rendu
+> **Fiche unique.** Ce document regroupe désormais le brief de production et toutes les informations de référence sur le SI AtlasGrid.
+
+## Informations de cadrage
+
+- AtlasGrid est un opérateur d'énergie basé à Casablanca : production et distribution, environ 1 200 salariés, siège et plusieurs sites d'exploitation.
+- Ses clients sont de grands comptes industriels et des collectivités, avec des engagements contractuels de disponibilité.
+- La paie et la facturation sont internes. Une partie du SI et les sauvegardes en ligne sont exploitées par OasisNet.
+- La DSI interne est réduite : quelques administrateurs et un référent sécurité. OasisNet dispose d'accès d'administration à distance.
+- Les systèmes industriels de supervision et SCADA sont gérés à part, sur un réseau volontairement isolé du reste du SI.
+
+### Inventaire technique de référence
+
+| Service / actif | Serveur(s) | Technologie | Exploité par |
+|---|---|---|---|
+| Annuaire — authentification et droits | DC-01, DC-02 | Windows Server 2019, Active Directory | Interne |
+| Messagerie | MSG-01 | Microsoft Exchange 2019 | Interne |
+| ERP — achats, stocks, comptabilité | ERP-APP-01, ERP-DB-01 | Sage X3, SQL Server | Interne |
+| Paie | PAIE-01 | Sage Paie, SQL Server | Interne |
+| Facturation | FACT-02 | Application interne, SQL Server | Interne |
+| Serveurs de fichiers | FILER-RBT-02, FILER-CASA-01 | Windows Server, partages SMB | Interne |
+| Portail client | WEB-CLI-01 | Application web, IIS | Interne, exposé |
+| Site web public | Non précisé | CMS WordPress | Hébergeur externe |
+| Intranet et téléphonie | INTRA-01, IPBX-01 | SharePoint, IPBX (VoIP) | Interne |
+| VPN d'administration | VPN-GW | FortiGate SSL-VPN | Interne + OasisNet |
+| Sauvegarde en ligne | VBR-01, BKP-01, BKP-02 | Veeam Backup & Replication | OasisNet |
+| Copie hors ligne | Site secondaire | Bandes LTO-9, air-gap | Interne |
+| Antivirus / EDR | Console centrale | Microsoft Defender for Endpoint | Interne |
+| Supervision industrielle | SCADA-HMI-* | SCADA / IHM, réseau isolé | Interne |
+| Postes utilisateurs | Par service, ex. FIN-112, RH-031 | Non précisé | Interne |
+
+### Contrats et interlocuteurs
+
+| Interlocuteur | Information à faire apparaître ou à garder en tête |
+|---|---|
+| OasisNet | Exploite une partie du SI et les sauvegardes en ligne ; dispose d'un accès d'administration à distance ; disponibilité contractuelle. |
+| Assureur cyber | Police couvrant les incidents ; obligations de déclaration et de préservation des preuves. |
+| Clients grands comptes | Engagements de disponibilité au contrat, par exemple 99,5 %. |
+| Autorité de régulation | Cadre de notification en cas d'incident majeur. |
+
+## Format du rendu
 
 - **Une page** en PDF ou image, lisible à trois mètres.
 - En-tête obligatoire : nom de la cellule, ville, date/heure, titre « Cartographie du système d'information AtlasGrid », pôle pilote « Continuité d'activité + SOC ».
@@ -12,7 +51,7 @@
 - Ajouter un encadré « À protéger en priorité » avec les trois priorités ci-dessous.
 - Chaque élément touché ou suspect doit afficher la référence de la pièce qui le justifie.
 
-## 2. Légende obligatoire
+## Légende obligatoire
 
 | Apparence | Signification |
 |---|---|
@@ -26,7 +65,7 @@
 
 Ne pas représenter comme établi un lien absent des sources. Les liens incertains doivent être en pointillé et marqués « à valider ».
 
-## 3. Zones à dessiner
+## Zones à dessiner
 
 ### A. Utilisateurs, clients et Internet
 
@@ -69,7 +108,7 @@ Ne pas représenter comme établi un lien absent des sources. Les liens incertai
 - **SCADA-HMI-*** : supervision énergie/eau, réseau industriel isolé, exploité en interne.
 - L'isolation doit apparaître clairement : aucune flèche de circulation libre depuis le SI bureautique. La passerelle OT reste sous surveillance renforcée.
 
-## 4. État actuel des actifs
+## État actuel des actifs
 
 | Actif | Criticité | État à afficher | Justification |
 |---|---|---|---|
@@ -90,7 +129,7 @@ Ne pas représenter comme établi un lien absent des sources. Les liens incertai
 
 **Note d'impact global :** 23 serveurs sur 40 sont chiffrés (A-13).
 
-## 5. Flèches et dépendances à tracer
+## Flèches et dépendances à tracer
 
 ### Dépendances confirmées
 
@@ -114,13 +153,13 @@ Utiliser une flèche orange ou rouge, numérotée avec les pièces :
 
 **Important :** le phishing A-11 est une preuve confirmée, mais ne doit pas être dessiné comme la porte d'entrée technique certaine de MIRAGE. L'indiquer séparément comme « phishing confirmé, lien causal à établir ».
 
-## 6. Encadré « À protéger en priorité »
+## Encadré « À protéger en priorité »
 
 1. **OT / SCADA** : protection de la sûreté des personnes et de la distribution d'énergie ; conserver l'isolation et la surveillance renforcée.
 2. **Fichiers métier et reprise** : FILER-RBT-02, FILER-CASA-01, VBR-01, BKP-01/02 et copie LTO-9 ; indispensables à la paie, à la facturation et à la restauration.
 3. **VPN d'administration et identités** : VPN-GW, `svc_oasisnet`, DC-01 et DC-02 ; ils conditionnent l'accès à l'ensemble du SI.
 
-## 7. Ce qui ne doit pas figurer comme une menace active
+## Ce qui ne doit pas figurer comme une menace active
 
 - Clé USB du parking : elle n'a jamais été connectée — A-19.
 - Vrai courriel de migration interne — A-20.
@@ -129,7 +168,7 @@ Utiliser une flèche orange ou rouge, numérotée avec les pièces :
 - Pic de trafic sur le site public : lié à la presse — A-16.
 - Ancien salarié, scans Internet, PsExec légitime, archivage, connexion depuis Paris, ticket ransomware OasisNet, DarkAtlas, assistance à distance et faux positif cryptominer : tous écartés ou sans lien.
 
-## 8. Contrôle final avant export
+## Contrôle final avant export
 
 - Les sept zones sont distinctes et nommées.
 - Les 23 serveurs chiffrés et les actifs dégradés sont visibles.
@@ -138,3 +177,9 @@ Utiliser une flèche orange ou rouge, numérotée avec les pièces :
 - Les trois priorités sont visibles.
 - Les références A-01, A-02, A-03, A-04, A-05, A-09, A-10, A-12 et A-13 sont affichées près des éléments qu'elles soutiennent.
 - Le schéma reste sur une page et comporte l'en-tête de cellule.
+
+## Livrable attendu par le dossier initial
+
+- Une cartographie simplifiée : systèmes regroupés en zones et reliés selon leurs dépendances.
+- Une liste des actifs critiques, avec une criticité justifiée.
+- Les dépendances les plus préoccupantes, en particulier les services dont dépendent plusieurs autres actifs.
