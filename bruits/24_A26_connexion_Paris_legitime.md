@@ -1,6 +1,6 @@
 # Bruit A-26 — Connexion légitime depuis Paris
 
-![Capture A-26](24_A26_connexion_Paris_legitime.png)
+![Capture A-26](../assets/captures/bruits/24_A26_connexion_Paris_legitime.png)
 
 ## Signal enregistré
 

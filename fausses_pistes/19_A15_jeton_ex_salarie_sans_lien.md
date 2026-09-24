@@ -1,6 +1,6 @@
 # Fausse piste A-15 — Jeton mobile résiduel d'un ex-salarié
 
-![Capture A-15](19_A15_jeton_ex_salarie_sans_lien.png)
+![Capture A-15](../assets/captures/fausses_pistes/19_A15_jeton_ex_salarie_sans_lien.png)
 
 ## Pourquoi elle paraissait crédible
 

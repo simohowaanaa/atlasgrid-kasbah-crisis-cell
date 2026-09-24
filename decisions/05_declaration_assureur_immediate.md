@@ -1,6 +1,6 @@
 # Décision 05 — Déclarer immédiatement l'incident à l'assureur cyber
 
-![Capture de la décision 05](05_declaration_assureur_immediate.png)
+![Capture de la décision 05](../assets/captures/decisions/05_declaration_assureur_immediate.png)
 
 ## Décision retenue
 

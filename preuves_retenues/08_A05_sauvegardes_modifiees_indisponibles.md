@@ -1,6 +1,6 @@
 # Preuve A-05 — Sabotage et indisponibilité des sauvegardes
 
-![Capture A-05](08_A05_sauvegardes_modifiees_indisponibles.png)
+![Capture A-05](../assets/captures/preuves/08_A05_sauvegardes_modifiees_indisponibles.png)
 
 ## Fait objectivé
 

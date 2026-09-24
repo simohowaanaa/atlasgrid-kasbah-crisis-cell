@@ -1,6 +1,6 @@
 # Preuve A-02 — Accès VPN anormaux du compte `svc_oasisnet`
 
-![Capture A-02](04_A02_VPN_svc_oasisnet_anormal.png)
+![Capture A-02](../assets/captures/preuves/04_A02_VPN_svc_oasisnet_anormal.png)
 
 ## Fait objectivé
 

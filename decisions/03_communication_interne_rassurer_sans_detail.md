@@ -1,6 +1,6 @@
 # Décision 03 — Informer les équipes sans divulguer de détail sensible
 
-![Capture de la décision 03](03_communication_interne_rassurer_sans_detail.png)
+![Capture de la décision 03](../assets/captures/decisions/03_communication_interne_rassurer_sans_detail.png)
 
 ## Décision retenue
 

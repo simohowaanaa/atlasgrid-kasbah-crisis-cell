@@ -1,6 +1,6 @@
 # Preuve A-11 — Courriel d'hameçonnage AtlasGrid-IT
 
-![Capture A-11](01_A11_entetes_phishing_atlasgrid-it.png)
+![Capture A-11](../assets/captures/preuves/01_A11_entetes_phishing_atlasgrid-it.png)
 
 ## Fait objectivé
 

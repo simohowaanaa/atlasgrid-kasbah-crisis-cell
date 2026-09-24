@@ -1,6 +1,6 @@
 # Preuve A-23 — Tentative de fraude au président
 
-![Capture A-23](18_A23_BEC_fraude_au_president.png)
+![Capture A-23](../assets/captures/preuves/18_A23_BEC_fraude_au_president.png)
 
 ## Fait objectivé
 

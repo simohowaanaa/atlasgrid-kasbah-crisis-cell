@@ -1,6 +1,6 @@
 # Bruit A-27 — Archivage trimestriel autorisé
 
-![Capture A-27](22_A27_archivage_trimestriel_autorise.png)
+![Capture A-27](../assets/captures/bruits/22_A27_archivage_trimestriel_autorise.png)
 
 ## Signal enregistré
 

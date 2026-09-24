@@ -1,6 +1,6 @@
 # Preuve A-10 — Corrélations SIEM du compte `svc_oasisnet`
 
-![Capture A-10](13_A10_SIEM_acces_svc_oasisnet.png)
+![Capture A-10](../assets/captures/preuves/13_A10_SIEM_acces_svc_oasisnet.png)
 
 ## Fait objectivé
 

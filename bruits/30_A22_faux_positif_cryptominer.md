@@ -1,6 +1,6 @@
 # Bruit A-22 — Faux positif « cryptominer »
 
-![Capture A-22](30_A22_faux_positif_cryptominer.png)
+![Capture A-22](../assets/captures/bruits/30_A22_faux_positif_cryptominer.png)
 
 ## Signal enregistré
 

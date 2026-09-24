@@ -1,6 +1,6 @@
 # Preuve A-01 — Alerte EDR MIRAGE sur FIN-112
 
-![Capture A-01](02_A01_EDR_FIN-112_MIRAGE.png)
+![Capture A-01](../assets/captures/preuves/02_A01_EDR_FIN-112_MIRAGE.png)
 
 ## Fait objectivé
 

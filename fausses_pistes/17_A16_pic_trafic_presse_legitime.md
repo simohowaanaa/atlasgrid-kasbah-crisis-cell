@@ -1,6 +1,6 @@
 # Fausse piste A-16 — Pic de trafic lié à la presse
 
-![Capture A-16](17_A16_pic_trafic_presse_legitime.png)
+![Capture A-16](../assets/captures/fausses_pistes/17_A16_pic_trafic_presse_legitime.png)
 
 ## Pourquoi elle paraissait crédible
 

@@ -1,6 +1,6 @@
 # Fausse piste A-14 — Passage badge au datacenter non fiable
 
-![Capture A-14](06_A14_badge_DATACENTER_non_fiable.png)
+![Capture A-14](../assets/captures/fausses_pistes/06_A14_badge_DATACENTER_non_fiable.png)
 
 ## Pourquoi elle paraissait crédible
 

@@ -1,6 +1,6 @@
 # Preuve A-09 — Règle pare-feu et canal de commande
 
-![Capture A-09](10_A09_regle_firewall_C2.png)
+![Capture A-09](../assets/captures/preuves/10_A09_regle_firewall_C2.png)
 
 ## Fait objectivé
 

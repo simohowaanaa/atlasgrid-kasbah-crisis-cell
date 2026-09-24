@@ -12,19 +12,19 @@ Le chiffrement et la propagation justifient l'isolement des segments critiques. 
 
 ### A-01 — FIN-112 compromis et propagation en cours
 
-![A-01](02_A01_EDR_FIN-112_MIRAGE.png)
+![A-01](../../assets/captures/preuves/02_A01_EDR_FIN-112_MIRAGE.png)
 
 ### A-05 — Sauvegardes en ligne sabotées
 
-![A-05](08_A05_sauvegardes_modifiees_indisponibles.png)
+![A-05](../../assets/captures/preuves/08_A05_sauvegardes_modifiees_indisponibles.png)
 
 ### A-13 — 23 serveurs chiffrés, métiers touchés et OT intact
 
-![A-13](12_A13_inventaire_serveurs_impact.png)
+![A-13](../../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png)
 
 ### A-12 — Chronologie technique du chiffrement et de la propagation
 
-![A-12](15_A12_chronologie_EDR_FIN-112.png)
+![A-12](../../assets/captures/preuves/15_A12_chronologie_EDR_FIN-112.png)
 
 ## Décisions du pôle
 
@@ -32,13 +32,13 @@ Le chiffrement et la propagation justifient l'isolement des segments critiques. 
 
 Les partages et flux non indispensables sont coupés pour freiner MIRAGE tout en maintenant ce qui est nécessaire aux fonctions vitales.
 
-![Décision segments](02_isoler_segments_critiques.png)
+![Décision segments](../../assets/captures/decisions/02_isoler_segments_critiques.png)
 
 ### Maintenir l'OT sous surveillance renforcée
 
 La reconnaissance vers l'OT n'est pas une compromission prouvée. La passerelle est surveillée, les règles sont durcies et la coupure reste prête si un seuil factuel est franchi.
 
-![Décision OT](04_OT_surveillance_renforcee_sans_coupure.png)
+![Décision OT](../../assets/captures/decisions/04_OT_surveillance_renforcee_sans_coupure.png)
 
 ## Réponse orale proposée
 

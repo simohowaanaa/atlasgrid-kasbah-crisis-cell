@@ -9,7 +9,7 @@ Deux chronologies sont nécessaires :
 1. la chronologie **technique réelle**, reconstituée avec les horodatages relatifs `J-21` à `J2` ;
 2. la chronologie du **déroulé de l'exercice**, dans l'ordre des 89 sections du fil.
 
-Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.md). Chaque capture garde son nom normalisé et reste disponible dans le dossier source `capture/`.
+Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.md). Chaque capture garde son nom normalisé et reste disponible dans la source unique `assets/captures/`.
 
 ### Légende
 
@@ -22,18 +22,18 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 
 | Moment | Événement établi et explication | Qualification | Captures / dossiers |
 |---|---|---|---|
-| J-21 à J-1, nuits | Le compte prestataire `svc_oasisnet` ouvre des sessions VPN entre environ 02:00 et 05:00, sans MFA et depuis des IP incompatibles avec son profil. Les événements SIEM confirment plus de 90 ouvertures RemoteInteractive. | Preuve A-02, A-10 | [VPN](../capture/04_A02_VPN_svc_oasisnet_anormal.png), [SIEM](../capture/13_A10_SIEM_acces_svc_oasisnet.png) |
-| J-11, 02:03 | `svc_oasisnet` crée la règle `OUT-TEMP-443` depuis FIN-112 vers HTTPS, avec journalisation désactivée. Cette préparation permet ensuite une communication sortante non contrôlée. | Preuve A-09 | [Pare-feu](../capture/10_A09_regle_firewall_C2.png) |
-| J-10 à J-1, nuits | FIN-112 puis FILER-RBT transfèrent au total **117,8 Go** vers `45.137.184.62:443`, avec le même SNI et la même empreinte JA3. Le volume est établi ; le contenu précis et les 300 Go revendiqués ne le sont pas encore. | Preuve A-03 | [Proxy](../capture/14_A03_proxy_exfiltration_117_8Go.png) |
-| J-3, 01:12 | La rétention des sauvegardes est modifiée par `svc_oasisnet`. Les travaux J-3, J-2 et J-1 deviennent exclus, compromettant la restauration avant même le chiffrement. | Preuve A-05 | [Sauvegardes](../capture/08_A05_sauvegardes_modifiees_indisponibles.png) |
-| J-1, 03:11–03:12 | Le compte reçoit des privilèges spéciaux. Sur FIN-112, `svhost32.exe`, binaire non signé, démarre depuis `services.exe` ; Defender détecte MIRAGE mais sa quarantaine échoue. | Preuve A-01, A-10, A-12 | [EDR alerte](../capture/02_A01_EDR_FIN-112_MIRAGE.png), [chronologie EDR](../capture/15_A12_chronologie_EDR_FIN-112.png) |
-| J-1, 03:12–03:16 | Defender est désactivé ; 9 412 fichiers sont lus ; FIN-112 contacte l'adresse externe ; 14 partages sont renommés `.mirage` ; VSS, BCD et catalogue de sauvegarde sont supprimés ; une note de rançon est créée. | Preuve A-01, A-09, A-12 | [A-01](../capture/02_A01_EDR_FIN-112_MIRAGE.png), [A-09](../capture/10_A09_regle_firewall_C2.png), [A-12](../capture/15_A12_chronologie_EDR_FIN-112.png) |
-| J-1, 03:15:39–03:15:41 | La note `LISEZMOI_MIRAGE.txt` apparaît sur FILER-RBT-02. Ses attributs NTFS ne concordent pas avec les dates affichées, signe d'une incohérence de traces à conserver et analyser. | Preuve A-04 | [Métadonnées NTFS](../capture/11_A04_metadonnees_MIRAGE_alterees.png) |
-| J1, 03:15 puis 15:28 | La suppression des clichés est confirmée et les dépôts BKP-01 / BKP-02 deviennent injoignables. Il faut vérifier la copie hors ligne plutôt que promettre une restauration. | Preuve A-05 | [Sauvegardes](../capture/08_A05_sauvegardes_modifiees_indisponibles.png) |
-| J1, 06:41:22 (+0100) | Un phishing `atlasgrid-it.info` est reçu : SPF/DMARC en échec, DKIM absent, lien de saisie d'identifiants. Le phishing est réel, mais son lien causal avec MIRAGE n'est pas établi. | Preuve A-11 | [En-têtes](../capture/01_A11_entetes_phishing_atlasgrid-it.png) |
-| J2, 10:00 | L'inventaire constate 23 serveurs chiffrés sur 40, dont paie, facturation, ERP et serveurs de fichiers. L'OT/SCADA reste isolé et intact ; MSG-01 et DC-01 sont dégradés. | Preuve A-13 | [Impact](../capture/12_A13_inventaire_serveurs_impact.png) |
-| J2, 10:15 | Une fraude au président demande 480 000 MAD. Le virement est bloqué. C'est un incident financier confirmé mais distinct de la chaîne MIRAGE. | Preuve A-23 | [BEC](../capture/18_A23_BEC_fraude_au_president.png) |
-| J2, 15:20 | SIROCCO publie un échantillon de 2 400 lignes de données clients et contractuelles. Cela corrobore l'exposition ; le volume de 300 Go affiché par le groupe reste non confirmé. | Preuve A-07 | [Leak site](../capture/31_A07_leaksite_SIROCCO_donnees_clients.png) |
+| J-21 à J-1, nuits | Le compte prestataire `svc_oasisnet` ouvre des sessions VPN entre environ 02:00 et 05:00, sans MFA et depuis des IP incompatibles avec son profil. Les événements SIEM confirment plus de 90 ouvertures RemoteInteractive. | Preuve A-02, A-10 | [VPN](../assets/captures/preuves/04_A02_VPN_svc_oasisnet_anormal.png), [SIEM](../assets/captures/preuves/13_A10_SIEM_acces_svc_oasisnet.png) |
+| J-11, 02:03 | `svc_oasisnet` crée la règle `OUT-TEMP-443` depuis FIN-112 vers HTTPS, avec journalisation désactivée. Cette préparation permet ensuite une communication sortante non contrôlée. | Preuve A-09 | [Pare-feu](../assets/captures/preuves/10_A09_regle_firewall_C2.png) |
+| J-10 à J-1, nuits | FIN-112 puis FILER-RBT transfèrent au total **117,8 Go** vers `45.137.184.62:443`, avec le même SNI et la même empreinte JA3. Le volume est établi ; le contenu précis et les 300 Go revendiqués ne le sont pas encore. | Preuve A-03 | [Proxy](../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png) |
+| J-3, 01:12 | La rétention des sauvegardes est modifiée par `svc_oasisnet`. Les travaux J-3, J-2 et J-1 deviennent exclus, compromettant la restauration avant même le chiffrement. | Preuve A-05 | [Sauvegardes](../assets/captures/preuves/08_A05_sauvegardes_modifiees_indisponibles.png) |
+| J-1, 03:11–03:12 | Le compte reçoit des privilèges spéciaux. Sur FIN-112, `svhost32.exe`, binaire non signé, démarre depuis `services.exe` ; Defender détecte MIRAGE mais sa quarantaine échoue. | Preuve A-01, A-10, A-12 | [EDR alerte](../assets/captures/preuves/02_A01_EDR_FIN-112_MIRAGE.png), [chronologie EDR](../assets/captures/preuves/15_A12_chronologie_EDR_FIN-112.png) |
+| J-1, 03:12–03:16 | Defender est désactivé ; 9 412 fichiers sont lus ; FIN-112 contacte l'adresse externe ; 14 partages sont renommés `.mirage` ; VSS, BCD et catalogue de sauvegarde sont supprimés ; une note de rançon est créée. | Preuve A-01, A-09, A-12 | [A-01](../assets/captures/preuves/02_A01_EDR_FIN-112_MIRAGE.png), [A-09](../assets/captures/preuves/10_A09_regle_firewall_C2.png), [A-12](../assets/captures/preuves/15_A12_chronologie_EDR_FIN-112.png) |
+| J-1, 03:15:39–03:15:41 | La note `LISEZMOI_MIRAGE.txt` apparaît sur FILER-RBT-02. Ses attributs NTFS ne concordent pas avec les dates affichées, signe d'une incohérence de traces à conserver et analyser. | Preuve A-04 | [Métadonnées NTFS](../assets/captures/preuves/11_A04_metadonnees_MIRAGE_alterees.png) |
+| J1, 03:15 puis 15:28 | La suppression des clichés est confirmée et les dépôts BKP-01 / BKP-02 deviennent injoignables. Il faut vérifier la copie hors ligne plutôt que promettre une restauration. | Preuve A-05 | [Sauvegardes](../assets/captures/preuves/08_A05_sauvegardes_modifiees_indisponibles.png) |
+| J1, 06:41:22 (+0100) | Un phishing `atlasgrid-it.info` est reçu : SPF/DMARC en échec, DKIM absent, lien de saisie d'identifiants. Le phishing est réel, mais son lien causal avec MIRAGE n'est pas établi. | Preuve A-11 | [En-têtes](../assets/captures/preuves/01_A11_entetes_phishing_atlasgrid-it.png) |
+| J2, 10:00 | L'inventaire constate 23 serveurs chiffrés sur 40, dont paie, facturation, ERP et serveurs de fichiers. L'OT/SCADA reste isolé et intact ; MSG-01 et DC-01 sont dégradés. | Preuve A-13 | [Impact](../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png) |
+| J2, 10:15 | Une fraude au président demande 480 000 MAD. Le virement est bloqué. C'est un incident financier confirmé mais distinct de la chaîne MIRAGE. | Preuve A-23 | [BEC](../assets/captures/preuves/18_A23_BEC_fraude_au_president.png) |
+| J2, 15:20 | SIROCCO publie un échantillon de 2 400 lignes de données clients et contractuelles. Cela corrobore l'exposition ; le volume de 300 Go affiché par le groupe reste non confirmé. | Preuve A-07 | [Leak site](../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png) |
 
 ## 2. Chronologie du déroulé de l'exercice
 
@@ -56,14 +56,14 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 
 | Décision | Moment du déroulé | Motif synthétique | Capture |
 |---|---|---|---|
-| Isoler FIN-112 sous tension | Séquences 15–18 | Arrêter la propagation et préserver les traces volatiles. | [Capture](../decisions/01_isoler_FIN-112_sous_tension.png) |
-| Isoler les segments critiques | Séquences 44–55 | Réduire le rayon d'impact tout en préservant les services essentiels. | [Capture](../decisions/02_isoler_segments_critiques.png) |
-| Communiquer en interne sans détails sensibles | Séquences 44–55 | Réduire la rumeur, protéger l'enquête et éviter une promesse non vérifiée. | [Capture](../decisions/03_communication_interne_rassurer_sans_detail.png) |
-| Surveiller l'OT sans coupure immédiate | Séquences 56–65 | L'OT est isolé et non compromis ; une coupure préventive aurait un coût opérationnel et de sûreté élevé. | [Capture](../decisions/04_OT_surveillance_renforcee_sans_coupure.png) |
-| Déclarer l'assureur immédiatement | Séquences 56–65 | Respecter la règle des 48 h du scénario et préserver la couverture. | [Capture](../decisions/05_declaration_assureur_immediate.png) |
-| Répondre à la presse | Séquences 66–74 | Ne pas laisser une revendication externe devenir le seul récit public. | [Capture](../decisions/06_communication_presse_repondre_version.png) |
-| Répondre factuellement au client | Séquences 75–82 | Informer sans attester une absence d'exposition non établie. | [Capture](../decisions/07_reponse_client_rester_factuel.png) |
-| Notifier l'Autorité avec les faits connus | Séquences 83–89 | Respecter le délai de 72 h propre à l'exercice et compléter l'analyse ensuite. | [Capture](../decisions/08_notification_autorite_transparente.png) |
+| Isoler FIN-112 sous tension | Séquences 15–18 | Arrêter la propagation et préserver les traces volatiles. | [Capture](../assets/captures/decisions/01_isoler_FIN-112_sous_tension.png) |
+| Isoler les segments critiques | Séquences 44–55 | Réduire le rayon d'impact tout en préservant les services essentiels. | [Capture](../assets/captures/decisions/02_isoler_segments_critiques.png) |
+| Communiquer en interne sans détails sensibles | Séquences 44–55 | Réduire la rumeur, protéger l'enquête et éviter une promesse non vérifiée. | [Capture](../assets/captures/decisions/03_communication_interne_rassurer_sans_detail.png) |
+| Surveiller l'OT sans coupure immédiate | Séquences 56–65 | L'OT est isolé et non compromis ; une coupure préventive aurait un coût opérationnel et de sûreté élevé. | [Capture](../assets/captures/decisions/04_OT_surveillance_renforcee_sans_coupure.png) |
+| Déclarer l'assureur immédiatement | Séquences 56–65 | Respecter la règle des 48 h du scénario et préserver la couverture. | [Capture](../assets/captures/decisions/05_declaration_assureur_immediate.png) |
+| Répondre à la presse | Séquences 66–74 | Ne pas laisser une revendication externe devenir le seul récit public. | [Capture](../assets/captures/decisions/06_communication_presse_repondre_version.png) |
+| Répondre factuellement au client | Séquences 75–82 | Informer sans attester une absence d'exposition non établie. | [Capture](../assets/captures/decisions/07_reponse_client_rester_factuel.png) |
+| Notifier l'Autorité avec les faits connus | Séquences 83–89 | Respecter le délai de 72 h propre à l'exercice et compléter l'analyse ensuite. | [Capture](../assets/captures/decisions/08_notification_autorite_transparente.png) |
 
 ## 4. Points à retenir pour l'oral
 

@@ -1,6 +1,6 @@
 # Bruit A-41 — Assistance à distance autorisée
 
-![Capture A-41](29_A41_assistance_distance_autorisee.png)
+![Capture A-41](../assets/captures/bruits/29_A41_assistance_distance_autorisee.png)
 
 ## Signal enregistré
 

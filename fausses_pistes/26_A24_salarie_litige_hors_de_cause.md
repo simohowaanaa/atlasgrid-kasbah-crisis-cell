@@ -1,6 +1,6 @@
 # Fausse piste A-24 — Salarié en litige hors de la fenêtre d'attaque
 
-![Capture A-24](26_A24_salarie_litige_hors_de_cause.png)
+![Capture A-24](../assets/captures/fausses_pistes/26_A24_salarie_litige_hors_de_cause.png)
 
 ## Pourquoi elle paraissait crédible
 

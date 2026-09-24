@@ -1,6 +1,6 @@
 # Bruit A-21 — Scans Internet génériques
 
-![Capture A-21](20_A21_scans_internet_generiques.png)
+![Capture A-21](../assets/captures/bruits/20_A21_scans_internet_generiques.png)
 
 ## Signal enregistré
 

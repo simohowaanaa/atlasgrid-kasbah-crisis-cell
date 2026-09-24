@@ -1,6 +1,6 @@
 # Décision 08 — Notifier l'Autorité de façon transparente et évolutive
 
-![Capture de la décision 08](08_notification_autorite_transparente.png)
+![Capture de la décision 08](../assets/captures/decisions/08_notification_autorite_transparente.png)
 
 ## Décision retenue
 

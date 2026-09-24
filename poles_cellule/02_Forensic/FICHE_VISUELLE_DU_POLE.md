@@ -12,49 +12,49 @@ Les éléments convergent vers l'usage anormal de `svc_oasisnet`, une préparati
 
 ### A-01 — Alerte EDR : binaire MIRAGE sur FIN-112
 
-![A-01](02_A01_EDR_FIN-112_MIRAGE.png)
+![A-01](../../assets/captures/preuves/02_A01_EDR_FIN-112_MIRAGE.png)
 
 ### A-02 — VPN : point d'entrée ou usage de compte à investiguer
 
-![A-02](04_A02_VPN_svc_oasisnet_anormal.png)
+![A-02](../../assets/captures/preuves/04_A02_VPN_svc_oasisnet_anormal.png)
 
 ### A-05 — Sauvegardes : préparation de l'attaque et entrave à la reprise
 
-![A-05](08_A05_sauvegardes_modifiees_indisponibles.png)
+![A-05](../../assets/captures/preuves/08_A05_sauvegardes_modifiees_indisponibles.png)
 
 ### A-09 — Pare-feu : ouverture du chemin de commande
 
-![A-09](10_A09_regle_firewall_C2.png)
+![A-09](../../assets/captures/preuves/10_A09_regle_firewall_C2.png)
 
 ### A-04 — NTFS : horodatages de note de rançon incohérents
 
-![A-04](11_A04_metadonnees_MIRAGE_alterees.png)
+![A-04](../../assets/captures/preuves/11_A04_metadonnees_MIRAGE_alterees.png)
 
 ### A-10 — SIEM : corrélation accès, privilèges et effacement de trace
 
-![A-10](13_A10_SIEM_acces_svc_oasisnet.png)
+![A-10](../../assets/captures/preuves/13_A10_SIEM_acces_svc_oasisnet.png)
 
 ### A-03 — Proxy : exfiltration suspectée de 117,8 Go, volume objectivé
 
-![A-03](14_A03_proxy_exfiltration_117_8Go.png)
+![A-03](../../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png)
 
 ### A-12 — Chronologie EDR : trois minutes de propagation et sabotage
 
-![A-12](15_A12_chronologie_EDR_FIN-112.png)
+![A-12](../../assets/captures/preuves/15_A12_chronologie_EDR_FIN-112.png)
 
 ### A-18 — Revendication DarkAtlas : extrait initial à contrôler
 
-![A-18 — extrait](27_A18_revendication_DarkAtlas_extrait.png)
+![A-18 — extrait](../../assets/captures/fausses_pistes/27_A18_revendication_DarkAtlas_extrait.png)
 
 ### A-18 — Revendication DarkAtlas invalidée
 
 Les échantillons publics et les indicateurs différents empêchent de lier ce groupe à MIRAGE.
 
-![A-18 — analyse](28_A18_revendication_DarkAtlas_invalidee.png)
+![A-18 — analyse](../../assets/captures/fausses_pistes/28_A18_revendication_DarkAtlas_invalidee.png)
 
 ### A-07 — Publication SIROCCO : exposition corroborée, volume non confirmé
 
-![A-07](31_A07_leaksite_SIROCCO_donnees_clients.png)
+![A-07](../../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png)
 
 ## Réponse orale proposée
 

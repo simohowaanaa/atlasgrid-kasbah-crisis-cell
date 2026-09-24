@@ -1,6 +1,6 @@
 # Décision 06 — Répondre à la presse avec une version vérifiée
 
-![Capture de la décision 06](06_communication_presse_repondre_version.png)
+![Capture de la décision 06](../assets/captures/decisions/06_communication_presse_repondre_version.png)
 
 ## Décision retenue
 

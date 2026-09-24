@@ -1,6 +1,6 @@
 # Décision 02 — Isoler les segments critiques
 
-![Capture de la décision 02](02_isoler_segments_critiques.png)
+![Capture de la décision 02](../assets/captures/decisions/02_isoler_segments_critiques.png)
 
 ## Décision retenue
 

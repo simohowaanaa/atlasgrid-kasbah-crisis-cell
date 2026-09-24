@@ -1,6 +1,6 @@
 # Décision 04 — Renforcer la surveillance OT sans coupure immédiate
 
-![Capture de la décision 04](04_OT_surveillance_renforcee_sans_coupure.png)
+![Capture de la décision 04](../assets/captures/decisions/04_OT_surveillance_renforcee_sans_coupure.png)
 
 ## Décision retenue
 

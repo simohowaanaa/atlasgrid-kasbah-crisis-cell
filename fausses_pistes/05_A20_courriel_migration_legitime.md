@@ -1,6 +1,6 @@
 # Fausse piste A-20 — Courriel de migration de messagerie légitime
 
-![Capture A-20](05_A20_courriel_migration_legitime.png)
+![Capture A-20](../assets/captures/fausses_pistes/05_A20_courriel_migration_legitime.png)
 
 ## Pourquoi elle paraissait crédible
 

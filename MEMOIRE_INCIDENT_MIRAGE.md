@@ -75,7 +75,7 @@ Dernière consolidation : 24 septembre 2026. Ce dossier résume les actes I et I
 
 ## Captures renommées
 
-Les fichiers se trouvent dans `capture/`, dans l'ordre de la collecte. Les deux doublons et l'extrait partiel sont conservés et explicitement signalés.
+Les fichiers sont centralisés dans `assets/captures/`, classés par qualification. Les deux copies archivistiques sans information supplémentaire ont été retirées ; l'extrait initial DarkAtlas est conservé car il est distinct de son analyse finale.
 
 | N° | Fichier | Contenu |
 |---:|---|---|
@@ -87,14 +87,12 @@ Les fichiers se trouvent dans `capture/`, dans l'ordre de la collecte. Les deux 
 | 06 | `06_A14_badge_DATACENTER_non_fiable.png` | A-14 — badgeuse non fiable |
 | 07 | `07_A17_USB_paie_sauvegarde_autorisee.png` | A-17 — copie paie autorisée |
 | 08 | `08_A05_sauvegardes_modifiees_indisponibles.png` | A-05 — sauvegardes |
-| 09 | `09_A20_courriel_migration_legitime_copie.png` | A-20 — copie conservée |
 | 10 | `10_A09_regle_firewall_C2.png` | A-09 — règle et C2 |
 | 11 | `11_A04_metadonnees_MIRAGE_alterees.png` | A-04 — métadonnées NTFS |
 | 12 | `12_A13_inventaire_serveurs_impact.png` | A-13 — impact serveurs |
 | 13 | `13_A10_SIEM_acces_svc_oasisnet.png` | A-10 — SIEM |
 | 14 | `14_A03_proxy_exfiltration_117_8Go.png` | A-03 — exfiltration |
 | 15 | `15_A12_chronologie_EDR_FIN-112.png` | A-12 — chronologie EDR |
-| 16 | `16_A13_inventaire_serveurs_impact_copie.png` | A-13 — copie conservée |
 | 17 | `17_A16_pic_trafic_presse_legitime.png` | A-16 — trafic légitime |
 | 18 | `18_A23_BEC_fraude_au_president.png` | A-23 — BEC |
 | 19 | `19_A15_jeton_ex_salarie_sans_lien.png` | A-15 — jeton résiduel |

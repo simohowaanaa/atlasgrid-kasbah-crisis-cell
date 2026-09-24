@@ -1,6 +1,6 @@
 # Fausse piste A-17 — Copie locale de paie autorisée
 
-![Capture A-17](07_A17_USB_paie_sauvegarde_autorisee.png)
+![Capture A-17](../assets/captures/fausses_pistes/07_A17_USB_paie_sauvegarde_autorisee.png)
 
 ## Pourquoi elle paraissait crédible
 

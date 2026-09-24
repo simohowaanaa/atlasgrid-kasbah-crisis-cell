@@ -1,6 +1,6 @@
 # Bruit A-40 — Ticket OasisNet concernant un autre client
 
-![Capture A-40](25_A40_ticket_OasisNet_autre_client.png)
+![Capture A-40](../assets/captures/bruits/25_A40_ticket_OasisNet_autre_client.png)
 
 ## Signal enregistré
 

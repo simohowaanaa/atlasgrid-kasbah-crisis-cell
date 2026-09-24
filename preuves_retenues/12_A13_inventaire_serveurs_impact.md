@@ -1,6 +1,6 @@
 # Preuve A-13 — Inventaire de l'impact sur les serveurs
 
-![Capture A-13](12_A13_inventaire_serveurs_impact.png)
+![Capture A-13](../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png)
 
 ## Fait objectivé
 

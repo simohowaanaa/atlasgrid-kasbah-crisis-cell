@@ -1,6 +1,6 @@
 # Fausse piste A-19 — Clé USB trouvée sur le parking
 
-![Capture A-19](03_A19_cle_USB_parking_sandbox.png)
+![Capture A-19](../assets/captures/fausses_pistes/03_A19_cle_USB_parking_sandbox.png)
 
 ## Pourquoi elle paraissait crédible
 

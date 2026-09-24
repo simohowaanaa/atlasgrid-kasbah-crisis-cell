@@ -12,31 +12,31 @@ Les 117,8 Go de flux sortants et l'échantillon SIROCCO justifient une notificat
 
 ### A-13 — Impact majeur sur les services métier
 
-![A-13](12_A13_inventaire_serveurs_impact.png)
+![A-13](../../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png)
 
 ### A-03 — Flux sortants objectivés
 
-![A-03](14_A03_proxy_exfiltration_117_8Go.png)
+![A-03](../../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png)
 
 ### A-23 — Fraude au président bloquée
 
-![A-23](18_A23_BEC_fraude_au_president.png)
+![A-23](../../assets/captures/preuves/18_A23_BEC_fraude_au_president.png)
 
 ### A-15 — Jeton d'ex-salarié : faiblesse à corriger, pas de lien établi
 
-![A-15](19_A15_jeton_ex_salarie_sans_lien.png)
+![A-15](../../assets/captures/fausses_pistes/19_A15_jeton_ex_salarie_sans_lien.png)
 
 ### A-24 — Salarié en litige : hypothèse écartée sans accusation
 
-![A-24](26_A24_salarie_litige_hors_de_cause.png)
+![A-24](../../assets/captures/fausses_pistes/26_A24_salarie_litige_hors_de_cause.png)
 
 ### A-18 — DarkAtlas : revendication non corroborée
 
-![A-18](28_A18_revendication_DarkAtlas_invalidee.png)
+![A-18](../../assets/captures/fausses_pistes/28_A18_revendication_DarkAtlas_invalidee.png)
 
 ### A-07 — SIROCCO : échantillon de données clients et contractuelles
 
-![A-07](31_A07_leaksite_SIROCCO_donnees_clients.png)
+![A-07](../../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png)
 
 ## Décisions du pôle
 
@@ -44,13 +44,13 @@ Les 117,8 Go de flux sortants et l'échantillon SIROCCO justifient une notificat
 
 Le délai de 48 heures est une règle du scénario ; la déclaration préserve la couverture et le circuit d'autorisation des dépenses majeures.
 
-![Décision assureur](05_declaration_assureur_immediate.png)
+![Décision assureur](../../assets/captures/decisions/05_declaration_assureur_immediate.png)
 
 ### Notifier l'Autorité avec les faits connus
 
 La notification dans les 72 heures du scénario indique les certitudes, les inconnues et les mesures prises, puis prévoit des compléments.
 
-![Décision Autorité](08_notification_autorite_transparente.png)
+![Décision Autorité](../../assets/captures/decisions/08_notification_autorite_transparente.png)
 
 ## Réponse orale proposée
 

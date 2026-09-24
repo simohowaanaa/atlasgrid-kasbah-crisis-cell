@@ -1,6 +1,6 @@
 # Preuve A-12 — Chronologie EDR de l'attaque sur FIN-112
 
-![Capture A-12](15_A12_chronologie_EDR_FIN-112.png)
+![Capture A-12](../assets/captures/preuves/15_A12_chronologie_EDR_FIN-112.png)
 
 ## Fait objectivé
 

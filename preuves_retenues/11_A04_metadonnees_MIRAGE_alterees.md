@@ -1,6 +1,6 @@
 # Preuve A-04 — Métadonnées NTFS incohérentes sur la note MIRAGE
 
-![Capture A-04](11_A04_metadonnees_MIRAGE_alterees.png)
+![Capture A-04](../assets/captures/preuves/11_A04_metadonnees_MIRAGE_alterees.png)
 
 ## Fait objectivé
 

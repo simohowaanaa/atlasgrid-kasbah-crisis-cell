@@ -1,6 +1,6 @@
 # Bruit A-25 — Utilisation légitime de PsExec
 
-![Capture A-25](21_A25_PsExec_maintenance_autorisee.png)
+![Capture A-25](../assets/captures/bruits/21_A25_PsExec_maintenance_autorisee.png)
 
 ## Signal enregistré
 

@@ -1,6 +1,6 @@
 # Fausse piste A-18 — Revendication DarkAtlas invalidée
 
-![Capture A-18](28_A18_revendication_DarkAtlas_invalidee.png)
+![Capture A-18](../assets/captures/fausses_pistes/28_A18_revendication_DarkAtlas_invalidee.png)
 
 ## Pourquoi elle paraissait crédible
 

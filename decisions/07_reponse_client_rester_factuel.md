@@ -1,6 +1,6 @@
 # Décision 07 — Répondre au client de manière factuelle
 
-![Capture de la décision 07](07_reponse_client_rester_factuel.png)
+![Capture de la décision 07](../assets/captures/decisions/07_reponse_client_rester_factuel.png)
 
 ## Décision retenue
 

@@ -1,6 +1,6 @@
 # Décision 01 — Isoler FIN-112 en le laissant sous tension
 
-![Capture de la décision 01](01_isoler_FIN-112_sous_tension.png)
+![Capture de la décision 01](../assets/captures/decisions/01_isoler_FIN-112_sous_tension.png)
 
 ## Décision retenue
 

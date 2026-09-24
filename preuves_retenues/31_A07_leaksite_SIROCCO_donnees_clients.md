@@ -1,6 +1,6 @@
 # Preuve A-07 — Publication SIROCCO de données clients
 
-![Capture A-07](31_A07_leaksite_SIROCCO_donnees_clients.png)
+![Capture A-07](../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png)
 
 ## Fait objectivé
 

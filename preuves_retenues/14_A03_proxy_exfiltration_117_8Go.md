@@ -1,6 +1,6 @@
 # Preuve A-03 — Transferts sortants anormaux de 117,8 Go
 
-![Capture A-03](14_A03_proxy_exfiltration_117_8Go.png)
+![Capture A-03](../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png)
 
 ## Fait objectivé
 

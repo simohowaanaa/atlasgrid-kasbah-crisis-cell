@@ -12,19 +12,19 @@ AtlasGrid reconnaît l'incident, les mesures de confinement et l'investigation. 
 
 ### A-13 — Impact de service à expliquer avec prudence
 
-![A-13](12_A13_inventaire_serveurs_impact.png)
+![A-13](../../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png)
 
 ### A-03 — Exfiltration objectivée, mais contenu encore à qualifier
 
-![A-03](14_A03_proxy_exfiltration_117_8Go.png)
+![A-03](../../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png)
 
 ### A-16 — Pic de trafic lié à l'article de presse, pas à un DDoS
 
-![A-16](17_A16_pic_trafic_presse_legitime.png)
+![A-16](../../assets/captures/fausses_pistes/17_A16_pic_trafic_presse_legitime.png)
 
 ### A-07 — Échantillon SIROCCO : exposition corroborée, volume non confirmé
 
-![A-07](31_A07_leaksite_SIROCCO_donnees_clients.png)
+![A-07](../../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png)
 
 ## Décisions de communication
 
@@ -32,19 +32,19 @@ AtlasGrid reconnaît l'incident, les mesures de confinement et l'investigation. 
 
 La cellule répond à la rumeur et donne des consignes, sans promettre ce que l'analyse ne permet pas encore d'assurer.
 
-![Décision interne](03_communication_interne_rassurer_sans_detail.png)
+![Décision interne](../../assets/captures/decisions/03_communication_interne_rassurer_sans_detail.png)
 
 ### Répondre à la presse avec une version factuelle
 
 La réponse évite le silence, le déni et la divulgation d'informations sensibles.
 
-![Décision presse](06_communication_presse_repondre_version.png)
+![Décision presse](../../assets/captures/decisions/06_communication_presse_repondre_version.png)
 
 ### Répondre au client sans attestation non prouvée
 
 Le client reçoit les éléments confirmés, les mesures prises et une échéance de mise à jour.
 
-![Décision client](07_reponse_client_rester_factuel.png)
+![Décision client](../../assets/captures/decisions/07_reponse_client_rester_factuel.png)
 
 ## Réponse orale proposée
 
