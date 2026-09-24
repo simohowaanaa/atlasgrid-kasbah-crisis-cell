@@ -21,7 +21,6 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 | Reconstituer l'attaque | [Chronologie des preuves](CHRONOLOGIE_PREUVES.md) |
 | Revoir tous les événements de l'exercice | [Fiche de chronologie complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md) |
 | Consulter la synthèse de crise | [Mémoire de crise MIRAGE](MEMOIRE_INCIDENT_MIRAGE.md) |
-| Préparer l'oral et les livrables | [Guide de présentation et livrables](presentations/GUIDE_PRESENTATION_ET_LIVRABLES.md) |
 
 ## Organisation du dépôt
 
@@ -34,7 +33,6 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 | [`chronologie_complete/`](chronologie_complete/) | La fiche de chronologie complète et la galerie de toutes les captures. |
 | [`cartographie_SI/`](cartographie_SI/) | Le dossier de prise de poste, l'inventaire et le brief de production de la cartographie. |
 | [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, fiches visuelles, notes de décision et informations complètes du fil. |
-| [`presentations/`](presentations/) | Le guide de préparation ; votre future présentation finale sera ajoutée ici. |
 | [`assets/captures/`](assets/captures/) | Source unique des captures, classées par contexte, preuve, fausse piste, bruit et décision. |
 
 ## Les six pôles
