@@ -29,7 +29,7 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 |---|---|
 | [`preuves_retenues/`](preuves_retenues/) | Les 12 captures qualifiées comme preuves, leurs fiches d'argumentation et le protocole de conservation. |
 | [`fausses_pistes/`](fausses_pistes/) | Les 8 pistes examinées puis écartées, leurs fiches de qualification et leur méthode d'analyse. |
-| [`bruits/`](bruits/) | Les 7 signaux sans lien établi avec MIRAGE. |
+| [`bruits/`](bruits/) | Les 7 signaux sans lien établi avec MIRAGE, leurs fiches de triage et leur méthode de qualification. |
 | [`decisions/`](decisions/) | Les 8 captures de décision, leurs fiches d'argumentation et les références de conformité. |
 | [`cartographie_SI/`](cartographie_SI/) | Le dossier de prise de poste, l'inventaire et le brief de production de la cartographie. |
 | [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, notes de décision et informations complètes du fil. |
