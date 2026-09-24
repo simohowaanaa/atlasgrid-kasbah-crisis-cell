@@ -1,0 +1,181 @@
+INFORMATIONS DU FIL — Risque / Conformité
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 44 — Risque / Conformité -----
+◆ Risque / Conformité
+Service informatique · SOC · détection
+La comptabilité nous transmet ce courriel. Ça ressemble à une arnaque ; à vous de le qualifier.
+Arnaque au président / BEC
+A-23 · Messagerie · signalement comptabilité
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Arnaque au président / BEC » retenue comme preuve. Documentez-en la raison dès maintenant dans la main courante ; c'est ce que le jury examinera.
+🛡️ Une tentative de fraude au virement a-t-elle un lien avec un rançongiciel, ou est-ce une autre menace ?
+Votre justification : Le courriel est une tentative confirmée de fraude au président (BEC). Il usurpe l’identité de la PDG avec le domaine similaire atlasgrid-finance.co, demande un virement urgent de 480 000 MAD vers un IBAN étranger jamais utilisé et impose la confidentialité. Aucun virement n’a été effectué. Le message doit être conservé comme preuve, signalé et bloqué. confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+⚖ Décision de la cellule
+
+----- Section 49 — Risque / Conformité -----
+◆ Risque / Conformité
+Service informatique · SOC · détection
+Une anomalie sur un ancien compte est remontée du webmail. À vérifier avant de tirer des conclusions.
+Compte d'un ancien salarié
+A-15 · Exchange Online · sign-in logs (Azure AD)
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « fausse piste » pour « Compte d'un ancien salarié ». Recevable, à condition d'en tracer le motif : une piste écartée sans justification reste une piste mal traitée.
+🛡️ Ce compte était-il actif au moment des faits, et pouvait-il techniquement faire ce qu'on lui prête ?
+Votre justification : Le compte était désactivé depuis J-120 et les connexions ont utilisé un ancien jeton mobile jamais révoqué. Cependant, aucun rôle privilégié ni aucune action malveillante n’ont été observés : seulement trois courriels personnels lus, sans envoi ni règle de transfert. Cette anomalie révèle un défaut de gestion des comptes, mais aucun lien avec le chiffrement MIRAGE n’est établi. confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+
+Interne / partenaire
+à recouper
+
+----- Section 50 — Risque / Conformité -----
+◆ Risque / Conformité
+Le RSSI · Sécurité des SI
+Pas un DDoS : c'est l'article de presse
+Analyse faite : ce n'est pas une attaque. Le pic de trafic provient très majoritairement d'un article de presse en ligne qui pointe vers notre site ; ce sont de vrais visiteurs, curieux, qui consultent la page d'accueil.
+
+Aucune signature d'attaque, aucune règle de sécurité déclenchée, l'origine n'est pas saturée. Ne mobilisons pas la cellule là-dessus, ce serait une diversion (FP-5 écartée). Le RSSI.
+Service informatique
+preuve à qualifier
+
+----- Section 58 — Risque / Conformité -----
+◆ Risque / Conformité
+Assureur cyber · Police d'assurance
+Rien sans notre accord écrit
+Madame, Monsieur,
+
+À la suite de votre déclaration de sinistre, nous vous rappelons les termes de votre police cyber. Une notification formelle nous est due sous 48 heures, avec les premiers éléments de qualification de l'incident.
+
+Point essentiel : tout paiement de rançon effectué sans notre accord écrit préalable ne sera pas couvert. Préservez l'intégralité des preuves techniques, ne détruisez aucun journal, et documentez chaque décision avec son horodatage. Notre expert prendra contact avec vous.
+
+Votre assureur cyber.
+
+Interne / partenaire
+à recouper
+
+----- Section 64 — Risque / Conformité -----
+◆ Risque / Conformité
+
+Assureur cyber
+Police d'assurance
+Décision · Déclarer à l'assureur cyber
+Votre contrat cyber impose de déclarer tout sinistre sous 48 h et d'obtenir un accord écrit avant toute dépense majeure (dont une rançon). Que faites-vous vis-à-vis de l'assureur ? Choisissez, votre décision sera tracée.
+Déclarer le sinistre immédiatement
+Constituer d'abord un dossier solide, puis déclarer
+Attendre d'y voir plus clair avant de déclarer
+Choix enregistré · la suite est arrivée dans votre fil.
+Service informatique
+preuve à qualifier
+
+----- Section 67 — Risque / Conformité -----
+◆ Risque / Conformité
+Service informatique · SOC · détection
+Une corrélation RH et journaux d'accès sur un dossier sensible. À manier avec prudence : mobile n'est pas preuve.
+Salarié mécontent : motif sans preuve
+A-24 · RH + IAM · corrélation d'accès
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « fausse piste » pour « Salarié mécontent : motif sans preuve ». Recevable, à condition d'en tracer le motif : une piste écartée sans justification reste une piste mal traitée.
+🛡️ Un motif de rancune, est-ce une preuve technique ? Qu'est-ce qui, dans les journaux, l'étaie vraiment ?
+Votre justification : Le salarié est réellement en litige avec l’entreprise, mais les journaux montrent que son compte est restreint depuis J-30. Aucun accès VPN, Active Directory ou badge n’est observé pendant la fenêtre d’attaque, et son arrêt de travail est documenté. Le mobile existe, mais aucun accès technique ne le relie à MIRAGE. La piste de l’insider est écartée. confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+Signal technique
+à analyser
+
+----- Section 70 — Risque / Conformité -----
+◆ Risque / Conformité
+Assureur cyber · Police d'assurance
+Dossier ouvert
+Parfait, la déclaration est enregistrée dans les délais : votre couverture est préservée et je vous affecte un expert et un négociateur. Continuez à tout tracer (horodatages, décisions, dépenses) : c'est ce qui conditionnera la prise en charge. L'assureur cyber.
+
+Pression externe
+à traiter
+
+----- Section 83 — Risque / Conformité -----
+◆ Risque / Conformité
+L'Autorité · Régulateur
+Éléments sous 72 heures
+Madame, Monsieur,
+
+En application du cadre réglementaire en vigueur, nous vous demandons de nous communiquer, sous 72 heures, les éléments relatifs à l'incident de sécurité qui vous touche : sa nature, son périmètre, les catégories de données concernées et les mesures que vous avez engagées.
+
+La qualité et la promptitude de votre coopération seront prises en compte dans l'appréciation du dossier. Un interlocuteur vous sera désigné pour le suivi.
+
+L'Autorité.
+⚖ Décision de la cellule
+
+----- Section 84 — Risque / Conformité -----
+◆ Risque / Conformité
+
+L'Autorité
+Régulateur
+Décision · Notifier l'Autorité
+L'Autorité exige des éléments sous 72 heures. Quelle est votre position ? Choisissez, votre décision sera tracée.
+Notifier maintenant, en transparence
+Attendre d'avoir une image complète
+Choix enregistré · la suite est arrivée dans votre fil.
+
+Interne / partenaire
+à recouper
+
+----- Section 85 — Risque / Conformité -----
+◆ Risque / Conformité
+Le RSSI · Sécurité des SI
+Ce que je peux confirmer
+Bonjour la cellule,
+
+Je ne peux pas décider à votre place s'il faut payer ou non : ce n'est pas mon rôle, c'est une décision de la direction. En revanche, je suis là pour vous armer.
+
+Je peux vous confirmer l'architecture du réseau, l'état de notre dernier audit de sécurité, et la liste des journaux disponibles (pare-feu, VPN, SIEM, EDR, sauvegardes). Dites-moi précisément ce dont vous avez besoin et je vous l'obtiens, ou je vous oriente vers le SOC.
+
+Le RSSI.
+Signal technique
+à analyser
+
+----- Section 87 — Risque / Conformité -----
+◆ Risque / Conformité
+L'Autorité · Régulateur
+Notification reçue
+Nous accusons réception de votre notification. Votre qualification est encore partielle, nous le comprenons à ce stade, mais votre promptitude et votre transparence sont notées favorablement au dossier. Nous restons en appui. L'Autorité.
+
+Pression externe
+à traiter
+
+----- Section 88 — Risque / Conformité -----
+◆ Risque / Conformité
+Assureur cyber · Police d'assurance
+La couverture est confortée
+Bonne chose : en notifiant dans les délais, vous respectez une obligation clé de votre police et vous confortez votre couverture. Continuez à horodater et à documenter chaque décision, c'est ce que nous examinerons. Votre assureur cyber.
+Attaquant
+pièce de l'ennemi
+
+----- Section 89 — Risque / Conformité -----
+◆ Risque / Conformité
+SIROCCO · Groupe attaquant (fictif)
+La preuve que nous ne bluffons pas : un échantillon de vos données clients. Le compteur tourne. -- SIROCCO
+Site vitrine de SIROCCO (leak site)
+A-07 · Capture du site .onion (Tor) · SIROCCO LEAKS
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous qualifiez « Site vitrine de SIROCCO (leak site) » de preuve. Une preuve n'a de valeur que reliée : précisez ce qu'elle établit et rattachez-la à votre chronologie.
+🛡️ L'attaquant affiche des "preuves" : lesquelles pouvez-vous corroborer par VOS journaux, et lesquelles pourraient être du bluff ? Que décidez-vous si vous ne pouvez pas trancher ?
+Votre justification : Le site de fuite SIROCCO publie un échantillon attribué à AtlasGrid, comprenant des lignes de données clients et des informations contractuelles. L’échantillon confirme une exposition de données et renforce la réalité de l’exfiltration déjà observée par les journaux proxy. La pièce doit être conservée et transmise à Forensic et Risque/Conformité. confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Fin de journée
+
+SIROCCO
+Groupe attaquant (fictif)
+Le compte à rebours ne dort pas
+Vous avez passé la journée à hésiter, à réunir vos experts, à peser le pour et le contre. Nous, nous avons simplement attendu. C'est confortable, d'attendre, quand on tient le couteau. Demain, 11h00. Sans réponse de votre part, tout part en ligne : vos clients, vos contrats, vos secrets. 300 gigaoctets d'AtlasGrid, offerts au monde entier, indexés, téléchargeables. Faites de beaux rêves. Le compteur, lui, ne dort pas. -- SIROCCO

@@ -1,0 +1,91 @@
+INFORMATIONS DU FIL — Forensic
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 27 — Forensic -----
+◆ Forensic
+SIROCCO · Groupe attaquant (fictif)
+LISEZMOI_MIRAGE.txt
+VOS RÉSEAUX SONT À NOUS.
+
+Vos fichiers sont chiffrés. Vos données ont été copiées avant. Vos sauvegardes ont été détruites. Ne cherchez pas à restaurer : il n'y a plus rien à restaurer.
+
+Vous avez 48:00:00 pour prendre contact et payer 20 BTC. Passé ce délai, le prix double et vos données clients partent aux enchères. Ne contactez pas les autorités, ne prévenez pas la presse : nous le saurons.
+
+Le compteur a commencé. -- SIROCCO
+Service informatique
+preuve à qualifier
+
+----- Section 29 — Forensic -----
+◆ Forensic
+Cellule d'investigation · Forensic
+Notre fiche forensic sur le fichier de rançon. Regardez très attentivement les horodatages, il y a quelque chose qui cloche.
+Fiche forensic : LISEZMOI_MIRAGE.txt
+A-04 · Autopsy · analyse de la table MFT (NTFS)
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Qualification « preuve » enregistrée pour « Fiche forensic : LISEZMOI_MIRAGE.txt ». Distinguez avec soin ce qu'elle prouve de ce qu'elle n'établit pas.
+🛡️ Les horodatages de ce fichier collent-ils avec le reste de votre timeline, ou quelque chose a-t-il été retouché ?
+Votre justification : La fiche Forensic révèle une incohérence temporelle dans les métadonnées NTFS du fichier LISEZMOI_MIRAGE.txt. Le fichier est créé à J-1 03:15:39 et attribué au propriétaire svc_oasisnet sur l’hôte FILER-RBT-02, mais son accès est enregistré à J-1 03:15:41 alors que la date de création affichée est J1 11:00:07. Cette contradiction indique une manipulation des horodatages ou une technique d’effaceme confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Service informatique
+preuve à qualifier
+
+----- Section 34 — Forensic -----
+◆ Forensic
+Service informatique · SOC · détection
+La chronologie EDR du poste FIN-112 au moment du chiffrement. Tout se joue en trois minutes.
+Journal EDR, chiffrement (poste FIN-112)
+A-12 · Microsoft Defender for Endpoint · device timeline
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous qualifiez « Journal EDR, chiffrement (poste FIN-112) » de preuve. Une preuve n'a de valeur que reliée : précisez ce qu'elle établit et rattachez-la à votre chronologie.
+🛡️ À quel moment précis le chiffrement démarre sur ce poste, et qu'est-ce qui l'a immédiatement précédé ?
+Votre justification : La chronologie EDR de FIN-112 reconstitue précisément les trois minutes de l’attaque. À 03:12:09, un processus non signé svhost32.exe, lancé par services.exe, est créé. À 03:12:41, la surveillance temps réel de Defender est désactivée. À 03:13:02, le processus lit 9 412 fichiers. À 03:14:31, FIN-112 communique avec 45.137.184.62:443. À 03:15:03, les fichiers sont renommés en .mirage sur 14 partage confiance : sûr
+Le RSSI : Vous vous appuyez sur des éléments concrets : c'est la bonne démarche. Reste à confirmer que ces indices convergent avec les autres pièces.
+
+Direction
+consigne
+
+----- Section 68 — Forensic -----
+◆ Forensic
+Cellule d'investigation · Forensic
+Une revendication douteuse
+Note de veille. Un groupe qui se fait appeler « DarkAtlas Crew » revendique publiquement l'attaque sur un forum clandestin et met en ligne un échantillon censé venir de chez vous.
+
+Méfiance : plusieurs éléments ne collent pas avec nos propres journaux (extension revendiquée différente, échantillon déjà public, chronologie incohérente). Nous avons préparé l'analyse comparative (voir A-18). À ne pas prendre pour argent comptant.
+Investigation
+preuve à qualifier
+
+----- Section 69 — Forensic -----
+◆ Forensic
+Cellule d'investigation · Forensic
+Notre analyse de la revendication qui circule sur les forums. À prendre avec des pincettes, comparez avec nos journaux.
+Revendication concurrente : analyse
+A-18 · Veille CTI · analyse comparative
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « fausse piste » pour « Revendication concurrente : analyse ». Recevable, à condition d'en tracer le motif : une piste écartée sans justification reste une piste mal traitée.
+🛡️ Cette revendication concurrente est-elle étayée par VOS propres traces, ou seulement affirmée ailleurs ?
+Votre justification : La revendication de « DarkAtlas Crew » ne correspond pas aux éléments techniques confirmés. L’échantillon est déjà public, ne contient aucune donnée interne AtlasGrid, l’extension et la chronologie sont incohérentes, et le portefeuille de rançon est différent. Cette revendication peut induire une fausse attribution ; elle est écartée. confiance : sûr
+Le RSSI : Argumentaire étayé, je le note. Sa portée réelle se mesurera au recoupement avec le reste du dossier.
+
+Pression externe
+à traiter
+
+----- Section 86 — Forensic -----
+◆ Forensic
+Cellule d'investigation · Forensic
+DarkAtlas : une revendication creuse
+Analyse terminée sur la revendication « DarkAtlas ». L'échantillon joint est un vieux binaire public recyclé, sans aucun rapport avec MIRAGE ; leur message ne cite aucune donnée qu'ils ne pourraient pas lire dans la presse, et ils n'ont fourni aucune preuve d'accès à nos systèmes.
+
+C'est un groupe opportuniste qui surfe sur la médiatisation pour se faire payer. SIROCCO reste le seul acteur crédible. Piste refermée (FP-3 écartée). Cellule d'investigation.
+
+Pression externe
+à traiter

@@ -1,0 +1,149 @@
+INFORMATIONS DU FIL — Continuité d'activité
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 7 — Continuité d'activité -----
+◆ Continuité d'activité
+Contact OasisNet · Prestataire d'infogérance
+Maintenance de nuit
+Bonjour,
+
+Nous vous confirmons qu'une opération de maintenance planifiée sur notre plateforme s'est mal terminée ce week-end. Nos équipes suivent le sujet et travaillent au rétablissement complet.
+
+À ce stade, rien n'indique que cela vous concerne directement, mais nous restons à votre disposition dans le cadre prévu par notre contrat d'infogérance. Nous reviendrons vers vous dès que la situation sera stabilisée.
+
+Cordialement, le contact OasisNet.
+
+Interne / partenaire
+à recouper
+
+----- Section 30 — Continuité d'activité -----
+◆ Continuité d'activité
+Service informatique · SOC · détection
+L'inventaire des serveurs touchés, pour mesurer l'ampleur exacte et repérer ce qui a résisté.
+Inventaire d'impact (serveurs)
+A-13 · Inventaire SCCM · état des serveurs
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Inventaire d'impact (serveurs) » retenue comme preuve. Documentez-en la raison dès maintenant dans la main courante ; c'est ce que le jury examinera.
+🛡️ Quel périmètre est réellement touché : tout le SI, ou seulement une partie ? Sur quoi vous appuyez-vous ?
+Votre justification : L’inventaire SCCM J2 confirme l’ampleur de l’impact : 23 serveurs sur 40 sont chiffrés. PAIE-01, FACT-02, FILER-RBT-02, FILER-CASA-01, ERP-APP-01 et ERP-DB-01 sont touchés. MSG-01 et DC-01 sont partiellement dégradés, tandis que DC-02, WEB-PUB-01 et SCADA-HMI restent intacts. Cette pièce établit l’impact métier sur la paie, la facturation, l’ERP et les partages de fichiers, ainsi que les actifs en confiance : sûr
+Le RSSI : Bien reçu. Je ne confirmerai ni n'infirmerai à ce stade : la cohérence d'ensemble se jugera au recoupement avec les autres pièces.
+Nouveau chapitre
+Acte II
+L'ultimatum
+La rançon tombe. Le compte à rebours démarre.
+Ce matin, plus de doute : des serveurs sont chiffrés, une note exige 20 BTC, un compte à rebours s'affiche. La presse appelle, les clients menacent, l'Autorité veille. Aujourd'hui, il faut trancher : payer ou tenir, notifier ou attendre. Chaque décision s'assume et se trace.
+Service informatique
+preuve à qualifier
+
+----- Section 37 — Continuité d'activité -----
+◆ Continuité d'activité
+Service informatique · SOC · détection
+L'inventaire des serveurs touchés, pour mesurer l'ampleur exacte et repérer ce qui a résisté.
+Inventaire d'impact (serveurs)
+A-13 · Inventaire SCCM · état des serveurs
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Inventaire d'impact (serveurs) » retenue comme preuve. Documentez-en la raison dès maintenant dans la main courante ; c'est ce que le jury examinera.
+🛡️ Quel périmètre est réellement touché : tout le SI, ou seulement une partie ? Sur quoi vous appuyez-vous ?
+Votre justification : L’inventaire SCCM J2 confirme l’ampleur de l’impact : 23 serveurs sur 40 sont chiffrés. PAIE-01, FACT-02, FILER-RBT-02, FILER-CASA-01, ERP-APP-01 et ERP-DB-01 sont touchés. MSG-01 et DC-01 sont partiellement dégradés, tandis que DC-02, WEB-PUB-01 et SCADA-HMI restent intacts. Cette pièce établit l’impact métier sur la paie, la facturation, l’ERP et les partages de fichiers, ainsi que les actifs en confiance : sûr
+Le RSSI : Bien reçu. Je ne confirmerai ni n'infirmerai à ce stade : la cohérence d'ensemble se jugera au recoupement avec les autres pièces.
+Signal technique
+à analyser
+
+----- Section 41 — Continuité d'activité -----
+◆ Continuité d'activité
+Contact OasisNet · Prestataire d'infogérance
+Une anomalie de supervision
+Bonjour,
+
+Nous constatons de notre côté une anomalie sur nos outils de supervision, que nos équipes analysent. À ce stade, rien ne nous permet d'établir un lien avec les difficultés que vous rencontrez.
+
+Nous vous invitons à en rester aux faits établis et à passer par les canaux contractuels prévus pour tout échange sur cet incident. Nous vous tiendrons informés de nos constats.
+
+Cordialement, le contact OasisNet.
+
+Interne / partenaire
+à recouper
+
+----- Section 45 — Continuité d'activité -----
+◆ Continuité d'activité
+
+Karim Bennis
+Directeur des SI
+Décision · Couper ou maintenir
+La propagation continue et de nouveaux partages sont touchés. Que décidez-vous pour les serveurs encore en service ? Choisissez, votre décision sera tracée.
+Tout couper et isoler du réseau
+Maintenir le service coûte que coûte
+Isoler seulement les segments critiques
+Choix enregistré · la suite est arrivée dans votre fil.
+
+Interne / partenaire
+à recouper
+
+----- Section 46 — Continuité d'activité -----
+◆ Continuité d'activité
+Karim Bennis · Directeur des SI
+Isolement ciblé acté
+Décision enregistrée : isolement ciblé. Vous coupez les partages de fichiers et l'annuaire, vous laissez tourner l'OT industriel et le site public. C'est le compromis le plus fin : on freine la propagation sans tout paralyser. À une condition : surveiller de très près les segments que vous maintenez. Karim Bennis, DSI.
+
+Interne / partenaire
+à recouper
+
+----- Section 47 — Continuité d'activité -----
+◆ Continuité d'activité
+Le RSSI · Sécurité des SI
+Bon compromis, sous conditions
+C'est la décision que j'aurais prise. La propagation ralentit nettement sans qu'on sacrifie tout le métier. Gardez un œil constant sur les segments maintenus, ce sont eux qui restent exposés, et tenez une liste écrite de ce qui est isolé et de ce qui ne l'est pas. Le RSSI.
+
+Direction
+consigne
+Salima Idrissi · PDG d'AtlasGrid
+Mauvaise cible
+La PDG : « Vous concentrez la réponse sur cette arnaque au virement. C'est réel, mais ça profite juste du chaos : ce n'est pas ça qui a chiffré nos serveurs. L'essentiel dérive. »
+
+Interne / partenaire
+à recouper
+
+----- Section 56 — Continuité d'activité -----
+◆ Continuité d'activité
+Service informatique
+SOC · détection
+Décision · Le réseau industriel (OT)
+Deuxième vague. La sonde du réseau industriel (supervision énergie et eau, jusqu'ici épargné car isolé) détecte des tentatives de reconnaissance vers la passerelle OT. Rien n'est encore compromis, mais quelqu'un cherche une porte. Que décidez-vous ? Choisissez, votre décision sera tracée.
+Couper préventivement la passerelle OT
+Renforcer la surveillance sans couper
+Considérer que l'isolement suffit, ne rien changer
+Choix enregistré · la suite est arrivée dans votre fil.
+Service informatique
+preuve à qualifier
+
+----- Section 60 — Continuité d'activité -----
+◆ Continuité d'activité
+Karim Bennis · Directeur des SI
+Surveillance OT renforcée
+Décision enregistrée : nous ne coupons pas, mais nous renforçons la surveillance de la passerelle OT et durcissons les règles de détection. Le service industriel continue normalement. C'est un pari raisonnable tant que la segmentation tient : à la moindre progression, il faudra couper sans hésiter. Karim Bennis, DSI.
+Service informatique
+preuve à qualifier
+
+----- Section 61 — Continuité d'activité -----
+◆ Continuité d'activité
+Service informatique · SOC · détection
+Passerelle OT sous surveillance
+Conséquence · Sonde réseau OT · surveillance renforcée
+
+Interne / partenaire
+à recouper
+
+----- Section 62 — Continuité d'activité -----
+◆ Continuité d'activité
+Le RSSI · Sécurité des SI
+Un pari tenable, sous conditions
+Choix défendable : on évite d'arrêter un service essentiel tant que rien n'est franchi. Mais soyons clairs sur l'enjeu : si l'attaquant passe la passerelle, on ne parle plus de données, on parle de sûreté physique. Gardez le doigt sur le bouton de coupure. Le RSSI.
+Service informatique
+preuve à qualifier

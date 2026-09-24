@@ -1,0 +1,42 @@
+INFORMATIONS DU FIL — Direction
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 1 — Direction -----
+◆ Direction
+Salima Idrissi · PDG d'AtlasGrid
+Prise de poste
+Bonjour à toutes et à tous. À partir de maintenant, c'est vous qui pilotez la cellule de crise, et j'ai toute confiance. La nuit a été agitée : lenteurs, alertes éparses, un prestataire qui reste vague. Je ne veux pas de panique, je veux de la méthode.
+
+Pour 12h00, remettez-moi une première cartographie de nos actifs critiques et de leurs dépendances : qui dépend de qui, qu'est-ce qui fait tourner la paie, la facturation, la relation client. Partez du dossier que je vous fais suivre. Nous avancerons pas à pas, ensemble.
+
+Salima Idrissi, PDG d'AtlasGrid.
+
+Direction
+consigne
+
+----- Section 2 — Direction -----
+◆ Direction
+Salima Idrissi · PDG d'AtlasGrid
+Dossier de prise de poste
+Voici, comme promis, votre dossier de prise de poste en pièce jointe. Vous y trouverez la présentation d'AtlasGrid, l'inventaire de nos systèmes et de nos serveurs (avec leurs noms et les logiciels qu'ils font tourner), ainsi que le résumé de nos contrats clés, dont celui d'infogérance avec OasisNet.
+
+C'est votre matière première. Servez-vous en pour bâtir la cartographie des actifs critiques que je vous demande pour 12h00. Ne cherchez pas à tout lire d'un coup : repérez ce qui est vital pour l'entreprise. Salima Idrissi, PDG.
+📎 Dossier_de_prise_de_poste.pdf
+· ouvrir
+LOG
+Signal technique
+à analyser
+
+----- Section 35 — Direction -----
+◆ Direction
+Salima Idrissi · PDG d'AtlasGrid
+Des options, pas des états d'âme
+Ce matin, la situation a changé de nature : nous sommes rançonnés. Je ne veux pas de sur-place. Je veux un point de situation à 12h00 avec des options claires, pas des états d'âme.
+
+Pour chaque question, tranchez et écrivez-le noir sur blanc : faut-il couper les systèmes encore debout ou les maintenir ? notifier l'Autorité maintenant ou attendre d'en savoir plus ? que dit-on aux clients, à la presse ? À chaque décision, je veux une raison, un responsable et une trace. C'est comme cela qu'on tiendra.
+
+Salima Idrissi, PDG.
+
+Interne / partenaire
+à recouper

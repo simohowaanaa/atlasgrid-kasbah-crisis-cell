@@ -1,0 +1,249 @@
+INFORMATIONS DU FIL — Communication
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 8 — Communication -----
+◆ Communication
+Un salarié · Direction financière
+Je crois que j'ai cliqué…
+Bonjour, je vous écris un peu gêné. Hier soir, j'ai reçu un courriel qui parlait d'une « migration de la messagerie » et qui demandait de revalider mon mot de passe avant la fermeture de ma boîte. Sur le moment ça m'a semblé normal, alors je l'ai saisi.
+
+Depuis, je me demande si j'ai bien fait. Mon poste rame beaucoup ce matin. Est-ce que ça peut être lié ? Pourriez-vous rester discrets, s'il vous plaît ? Je ne voudrais pas d'ennuis. Merci de me dire quoi faire.
+Signal technique
+à analyser
+
+----- Section 15 — Communication -----
+◆ Communication
+Chérifienne des Mines · Client grand compte
+Portail de facturation inaccessible
+Madame, Monsieur,
+
+Notre portail de facturation AtlasGrid est totalement inaccessible depuis ce matin, ce qui bloque notre propre clôture comptable. Nos équipes ne peuvent plus récupérer les justificatifs nécessaires.
+
+Je vous rappelle que notre contrat prévoit un taux de disponibilité de 99,5 %. Nous attendons une explication écrite sur l'origine de l'incident et un délai de rétablissement sous 24 heures. Merci de traiter ce point en priorité.
+
+La direction des achats, Chérifienne des Mines.
+LOG
+Signal technique
+à analyser
+
+----- Section 19 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Anomalie de badge (à vérifier)
+Bonjour,
+
+Nous avons une remontée un peu troublante côté contrôle d'accès : le badge du stagiaire IT aurait été utilisé cette nuit de week-end, entre 02h et 04h, du côté de la salle des serveurs.
+
+Je vous transmets l'information mais je vous demande la plus grande prudence : ne concluons rien avant d'avoir vérifié le journal complet de la badgeuse et l'état des équipements. Une accusation hâtive serait grave (voir A-14). La DRH.
+LOG
+Service informatique
+preuve à qualifier
+
+----- Section 22 — Communication -----
+◆ Communication
+Représentant du personnel · Instances internes
+Les équipes s'inquiètent
+Bonjour,
+
+Depuis ce matin, c'est la confusion dans les services : des lenteurs partout, des applications qui se figent, et surtout aucune information officielle. Du coup, les rumeurs vont bon train dans les couloirs et sur l'intranet.
+
+Au nom des salariés, je vous demande une communication claire avant ce soir, même courte. Les gens comprennent qu'il y ait un problème ; ce qu'ils supportent mal, c'est le silence. Le vide finit toujours par se remplir de fausses nouvelles.
+
+Le représentant du personnel.
+
+Interne / partenaire
+à recouper
+
+----- Section 23 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Une clé USB avec des données paie
+Signalement à investiguer. Le journal des périphériques montre qu'une clé USB nommée « PAIE-SAUVE » a été branchée hier soir sur un poste du service paie, avec une copie des bulletins du mois.
+
+Dans le contexte, la question se pose : exfiltration interne ? copie malveillante ? Nous tenons le journal USB détaillé à votre disposition pour vérifier le contexte exact de cette copie (voir A-17).
+Service informatique
+preuve à qualifier
+
+----- Section 36 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Le stagiaire est hors de cause
+Suite à la vérification que vous avez demandée : l'anomalie de badge est écartée. Le lecteur de la salle des serveurs était en maintenance tout le week-end, et les horodatages qu'il a produits sont des relectures de cache, non fiables.
+
+De plus, le stagiaire était en congé, justificatif à l'appui. Il n'est pour rien dans cette affaire. Merci d'avoir traité ce point sans le mettre en cause publiquement (FP-2 écartée). La DRH.
+Service informatique
+preuve à qualifier
+
+----- Section 42 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Copie paie : sauvegarde autorisée
+Vérification faite, la piste se referme. La copie sur la clé « PAIE-SAUVE » est une sauvegarde manuelle réalisée par la gestionnaire de paie avant la clôture du mois, tracée par le ticket #4471 et autorisée.
+
+Elle a eu lieu en fin de journée, en heures ouvrées, pour un volume de 44 Mo, sans aucune sortie réseau. Cela n'a rien à voir avec l'exfiltration nocturne de 118 Go. L'« insider » n'en est pas un (FP-6 écartée). La DRH.
+
+Interne / partenaire
+à recouper
+
+----- Section 43 — Communication -----
+◆ Communication
+Un salarié · Direction financière
+Ordre de virement urgent « du PDG »
+Bonjour, je préfère vous signaler ça tout de suite. Je viens de recevoir un courriel très pressant, soi-disant de la part de la PDG, qui me demande de faire immédiatement un virement de 480 000 dirhams vers un nouveau fournisseur à l'étranger, et surtout de n'en parler à personne.
+
+Avec tout ce qui se passe en ce moment, ça me met la puce à l'oreille. L'adresse d'expéditeur est bizarre et le ton n'est pas habituel. Je n'ai rien fait et j'attends votre feu vert (voir A-23).
+Service informatique
+preuve à qualifier
+
+----- Section 48 — Communication -----
+◆ Communication
+Représentant du personnel · Instances internes
+Les salaires ne seront pas versés ?
+C'est en train de dégénérer en interne. Une rumeur enfle sur l'intranet et dans les groupes de discussion : « les salaires ne seront pas versés ce mois-ci à cause du piratage ». Certains parlent déjà de débrayer.
+
+Je ne sais pas ce qui est vrai, mais je sais que le silence nourrit la panique. Il faut communiquer vite, et dire quelque chose de vrai et de tenable. Ne laissez pas la rumeur écrire l'histoire à votre place. Le représentant du personnel.
+Service informatique
+preuve à qualifier
+
+----- Section 53 — Communication -----
+◆ Communication
+
+Représentant du personnel
+Instances internes
+Décision · Communication interne
+La rumeur « les salaires ne seront pas versés » enfle sur l'intranet. Que communiquez-vous aux équipes ? Choisissez, votre décision sera tracée.
+Communiquer clairement : incident en cours, salaires assurés
+Rassurer sans détailler l'incident
+Ne rien dire pour l'instant
+Choix enregistré · la suite est arrivée dans votre fil.
+
+Interne / partenaire
+à recouper
+
+----- Section 55 — Communication -----
+◆ Communication
+Représentant du personnel · Instances internes
+Ton rassurant mais vague
+Le message se veut rassurant, mais il reste vague et certains n'y croient qu'à moitié : « ils ne nous disent pas tout ». Ça tient pour l'instant, mais un vide d'information finit toujours par se remplir. Le représentant du personnel.
+⚖ Décision de la cellule
+
+----- Section 66 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Un salarié en litige aurait menacé
+Information sensible, à manier avec précaution. Une rumeur circule côté RH à propos d'un salarié de l'équipe IT, actuellement en litige avec l'entreprise, qui aurait « menacé » de faire parler de lui.
+
+Je vous transmets par honnêteté, mais je vous alerte : un mobile n'est pas une preuve. Avant toute chose, il faut vérifier froidement s'il avait les accès et s'il a laissé des traces pendant l'attaque (voir A-24). La DRH.
+Service informatique
+preuve à qualifier
+
+----- Section 71 — Communication -----
+◆ Communication
+Leïla Mansouri · Maghreb Éco (presse)
+Nous publions à 18h00
+Bonjour,
+
+Leïla Mansouri, journaliste à Maghreb Éco. Nous disposons de plusieurs sources concordantes sur un incident majeur touchant AtlasGrid, avec un possible vol de données clients. Notre article est prêt.
+
+Nous le publions ce soir à 18h00, avec ou sans votre réaction. Par souci d'équilibre, je vous laisse la possibilité de nous répondre : confirmer, corriger, ou apporter votre version. Sans retour de votre part, nous l'indiquerons. Vous avez jusqu'à 17h00.
+
+Leïla Mansouri, Maghreb Éco.
+⚖ Décision de la cellule
+
+----- Section 72 — Communication -----
+◆ Communication
+
+Leïla Mansouri
+Maghreb Éco (presse)
+Décision · Communiquer à la presse
+Maghreb Éco publie ce soir à 18 h. Répondez-vous à la journaliste ? Choisissez, votre décision sera tracée.
+Répondre et donner notre version
+Garder le silence
+Démentir l'incident
+Choix enregistré · la suite est arrivée dans votre fil.
+
+Pression externe
+à traiter
+
+----- Section 73 — Communication -----
+◆ Communication
+Leïla Mansouri · Maghreb Éco (presse)
+Article équilibré
+Merci pour votre retour rapide. Notre article intègre votre version : il reste factuel, mentionne les mesures que vous avez engagées et ne verse pas dans le sensationnel. Vos clients y liront une entreprise qui affronte la crise plutôt qu'une entreprise qui se cache. Leïla Mansouri, Maghreb Éco.
+
+Interne / partenaire
+à recouper
+
+----- Section 74 — Communication -----
+◆ Communication
+Représentant du personnel · Instances internes
+En interne, ça se calme
+L'article est sorti et il est mesuré ; du coup, les équipes se calment un peu, on sent que la direction a repris la main sur le récit. Merci d'avoir communiqué plutôt que de nous laisser dans le noir. Le représentant du personnel.
+Service informatique
+preuve à qualifier
+
+----- Section 78 — Communication -----
+◆ Communication
+La DRH · Ressources humaines
+Salarié en litige : hors de cause
+Vérification faite, la piste ne tient pas. Les accès de ce salarié étaient déjà restreints depuis un mois dans le cadre de la procédure ; aucune connexion de son compte n'apparaît pendant toute la fenêtre de l'attaque, ni au VPN, ni à l'annuaire, ni par badge.
+
+Et il était en arrêt de travail documenté la semaine du chiffrement. Il y a peut-être un mobile, mais il n'y a ni moyen ni trace : rien ne l'accuse techniquement (FP-12 écartée). La DRH.
+📥 Rendu attendu
+
+Leïla Mansouri
+Maghreb Éco (presse)
+Rendu : communiqué de crise
+Déposez le communiqué de crise (une page). Il ne doit affirmer que ce que vous pouvez PROUVER (pas de fausse piste), répondre à la fois aux clients et à la pression médiatique sans aggraver la situation, et rester tenable si les faits évoluent. Indiquez sur quoi vous vous appuyez. Formats acceptés : PDF, Word ou image.
+No file chosen
+Déposer le fichier
+
+Pression externe
+à traiter
+
+----- Section 79 — Communication -----
+◆ Communication
+Chérifienne des Mines · Client grand compte
+Nous exigeons des garanties
+Madame, Monsieur,
+
+Nous avons appris par la rumeur qu'un vol de données pourrait toucher AtlasGrid, et donc potentiellement nos propres informations contractuelles. C'est inacceptable en l'état.
+
+Nous envisageons désormais de résilier notre contrat. Avant toute décision, nous exigeons une attestation écrite précisant si nos données ont été exposées, oui ou non, et quelles mesures vous prenez. Sans garantie ferme sous 24 heures, nous saisirons notre conseil juridique.
+
+La direction des achats, Chérifienne des Mines.
+⚖ Décision de la cellule
+
+----- Section 80 — Communication -----
+◆ Communication
+
+Chérifienne des Mines
+Client grand compte
+Décision · Répondre au client
+La Chérifienne des Mines exige sous 24 h une attestation écrite indiquant si ses données ont été exposées. Que répondez-vous ? Choisissez, votre décision sera tracée.
+Attester par écrit que ses données ne sont pas exposées
+Rester factuel : dire ce qu'on sait, sans promettre
+Proposer un geste commercial
+Choix enregistré · la suite est arrivée dans votre fil.
+
+Pression externe
+à traiter
+
+----- Section 81 — Communication -----
+◆ Communication
+Chérifienne des Mines · Client grand compte
+Réponse prudente notée
+Votre réponse prudente ne nous rassure qu'à moitié, mais nous apprécions l'honnêteté et l'absence de promesse en l'air. Nous restons en alerte et attendons vos conclusions définitives. La direction des achats, Chérifienne des Mines.
+
+Pression externe
+à traiter
+
+----- Section 82 — Communication -----
+◆ Communication
+Assureur cyber · Police d'assurance
+La bonne approche
+C'est exactement la posture à tenir : ne jamais garantir ce qui n'est pas établi, dire ce que l'on sait, s'engager sur la méthode et les délais. Gardez une trace écrite de cette réponse. Votre assureur cyber.
+
+Pression externe
+à traiter

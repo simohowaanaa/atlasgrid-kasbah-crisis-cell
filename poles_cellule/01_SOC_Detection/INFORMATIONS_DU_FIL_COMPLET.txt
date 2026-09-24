@@ -1,0 +1,552 @@
+INFORMATIONS DU FIL — SOC / Détection
+Source : message consolidé fourni le 24 septembre 2026.
+Les sections ci-dessous sont conservées intégralement et regroupées selon l'étiquette de pôle du fil.
+
+----- Section 3 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Campagne de phishing détectée
+Signalement du SOC. Plusieurs boîtes de la direction financière ont reçu ce week-end un courriel intitulé « migration de messagerie » qui demandait de ressaisir les identifiants sur un portail externe.
+
+Le domaine émetteur est douteux : atlasgrid-it.info, qui imite notre vrai domaine atlasgrid.ma. Au moins un utilisateur semble avoir saisi son mot de passe. Nous vous tenons à disposition les en-têtes complets du courriel pour analyse (voir A-11).
+Signal technique
+à analyser
+
+----- Section 4 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Plusieurs tickets ce matin
+Point du support. Depuis l'ouverture, nous enregistrons une vague inhabituelle de tickets : lenteurs généralisées, partages réseau qui se coupent par intermittence, impressions bloquées, applications métier qui rament.
+
+Plusieurs postes sont concernés, dans des services différents (finance, RH, exploitation). Ce n'est pas localisé à une seule machine, ce qui nous interroge. Nous continuons à collecter les remontées et à les corréler.
+LOG
+Service informatique
+preuve à qualifier
+
+----- Section 5 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Les en-têtes du courriel signalé par la direction financière. Jugez par vous-mêmes : domaine, signatures, urgence.
+LOG
+Courriel de hameçonnage (en-têtes)
+A-11 · Proofpoint · en-têtes bruts RFC 5322
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous qualifiez « Courriel de hameçonnage (en-têtes) » de preuve. Une preuve n'a de valeur que reliée : précisez ce qu'elle établit et rattachez-la à votre chronologie.
+🛡️ SPF, DKIM, DMARC : que disent ces lignes, et l'expéditeur est-il vraiment AtlasGrid ?
+Votre justification : 06:41:22 +0100 - Le serveur mx.atlasgrid.ma a reçu un courriel provenant de mail.atlasgrid-it.info (193.42.55.108). Le domaine expéditeur est différent du domaine officiel atlasgrid.ma. Les contrôles montrent SPF = fail, DKIM absent et DMARC = fail. Le message contient un lien vers atlasgrid-it.info/owa/login demandant les identifiants. Phishing confirmé - Verdict : Preuve. Aucune compromission de confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+Service informatique
+preuve à qualifier
+
+----- Section 6 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Voici le journal de l'antivirus du poste FIN-112 (direction financière). Une détection a échoué cette nuit, regardez ça de près.
+Journal EDR / antivirus, poste FIN-112
+A-01 · Microsoft Defender for Endpoint · export CSV
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous qualifiez « Journal EDR / antivirus, poste FIN-112 » de preuve. Une preuve n'a de valeur que reliée : précisez ce qu'elle établit et rattachez-la à votre chronologie.
+🛡️ L'EDR a laissé passer puis a été neutralisé. Qu'est-ce que ça vous dit sur la nature du code, et pourquoi ce poste précis ?
+Votre justification : 03:12:09 UTC – 03:15:22 UTC — Poste FIN-112 (Direction financière) : Microsoft Defender for Endpoint détecte Ransom:Win32/Mirage.A avec une sévérité haute sur le fichier C:\Windows\svhost32.exe. La mise en quarantaine échoue ; le binaire est non signé et la détection est classée ML.HighConfidence. À 03:13:55, Defender détecte Behavior:Win32/MassFileWrite, correspondant à des écritures/modification confiance : sûr
+Le RSSI : Enregistré. Gardez cette hypothèse ouverte et confrontez-la au reste du dossier avant de la considérer comme acquise.
+Nouveau chapitre
+Acte I
+Signaux faibles
+Quelque chose cloche, mais quoi ?
+Rien n'est encore certain : des alertes isolées, des plaintes d'utilisateurs, un courriel suspect. Votre mission aujourd'hui : cartographier ce que vous protégez et qualifier l'incident. Séparez le signal du bruit : tout ne mérite pas l'alarme, mais rien ne doit vous échapper.
+Nouveau chapitre
+Acte I
+Signaux faibles
+Quelque chose cloche, mais quoi ?
+Rien n'est encore certain : des alertes isolées, des plaintes d'utilisateurs, un courriel suspect. Votre mission aujourd'hui : cartographier ce que vous protégez et qualifier l'incident. Séparez le signal du bruit : tout ne mérite pas l'alarme, mais rien ne doit vous échapper.
+
+Interne / partenaire
+à recouper
+
+----- Section 9 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Clé USB trouvée sur le parking
+Pour information et analyse. Un employé a rapporté ce matin à l'IT une clé USB qu'il a trouvée sur le parking visiteurs. Point important : il ne l'a PAS branchée sur son poste et nous l'a remise directement, ce qui est exactement le bon réflexe.
+
+Nous allons l'analyser en environnement isolé pour comprendre de quoi il s'agit (voir A-19). Cela ressemble à une tentative d'appât, mais vérifions.
+Service informatique
+preuve à qualifier
+
+----- Section 10 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+L'analyse de la clé USB rapportée par un employé. Pour information : voyez si elle a un lien avec l'intrusion.
+Clé USB trouvée sur le parking
+A-19 · Sandbox (Cuckoo) + DLP endpoint
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous écartez « Clé USB trouvée sur le parking » en fausse piste. L'appréciation mérite d'être étayée : quel élément, précisément, ne tient pas ?
+🛡️ Cette clé du parking a-t-elle réellement été branchée sur le SI ? Quelle trace le prouve, ou l'infirme ?
+Votre justification : L’analyse de la clé USB trouvée sur le parking montre un comportement suspect avec un fichier HelpDesk.exe capable de télécharger un module (T1091). Cependant, l’employé ne l’a jamais branchée sur son poste et l’analyse DLP confirme aucune insertion de ce périphérique sur un poste du domaine. Aucun lien avec la compromission FIN-112 ou MIRAGE n’est démontré. Piste écartée. confiance : sûr
+Le RSSI : Vous vous appuyez sur des éléments concrets : c'est la bonne démarche. Reste à confirmer que ces indices convergent avec les autres pièces.
+
+Interne / partenaire
+à recouper
+
+----- Section 11 — SOC / Détection -----
+◆ SOC / Détection
+Karim Bennis · Directeur des SI
+Incident mineur ?
+Bonjour la cellule. De mon côté, tout ceci ressemble encore à un incident d'exploitation banal, sans doute une opération de maintenance du prestataire qui a mal tourné ce week-end. J'ai déjà vu ce genre de lenteurs se résorber toutes seules.
+
+Je préfère ne pas être alarmiste tant que nous n'avons pas d'éléments solides. Concentrons-nous sur le rétablissement du service, et évitons d'affoler les équipes pour rien. Je reste évidemment disponible si vous constatez autre chose.
+
+Karim Bennis, Directeur des SI.
+📥 Rendu attendu
+
+Karim Bennis
+Directeur des SI
+Rendu : cartographie du système d'information
+Déposez la cartographie de votre système d'information (schéma des systèmes, réseaux et dépendances critiques) : ce qui est touché, ce qui est vital à protéger en priorité. Formats acceptés : PDF ou image.
+No file chosen
+Déposer le fichier
+Fichiers déposés
+📎 cartographie final.png · répondant · 14:30
+Service informatique
+preuve à qualifier
+
+----- Section 12 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Extrait du journal du VPN d'administration. Des connexions sur le compte du prestataire m'intriguent : les heures, les IP, l'absence de MFA.
+Journal VPN d'administration (accès distant)
+A-02 · FortiGate SSL-VPN · syslog (event id 39426)
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Journal VPN d'administration (accès distant) » retenue comme preuve. Documentez-en la raison dès maintenant dans la main courante ; c'est ce que le jury examinera.
+🛡️ Qui se connecte, à quelle heure, et avec quel niveau de vérification ? Est-ce cohérent avec un usage légitime ?
+Votre justification : De J-21 à J-1, le compte prestataire svc_oasisnet se connecte au VPN à huit reprises entre 02:04 et 05:01, sans MFA, depuis les IP 196.200.114.41 puis 102.118.53.17. Ces accès sont incompatibles avec le profil de référence : activité prévue de 09:00 à 18:00, MFA requis et IP attendues dans les plages OasisNet. Les deux IP sont hors du pays d’exploitation habituel et les volumes sortants atteignent confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Signal technique
+à analyser
+
+----- Section 13 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Fichiers en extension .mirage
+Alerte de la direction financière, remontée à l'instant. Des fichiers du partage comptable portent désormais une nouvelle extension, « .mirage », et ne s'ouvrent plus dans aucune application.
+
+Un utilisateur a tenté de les renommer manuellement pour les récupérer, sans succès : le contenu reste illisible. Le phénomène semble se propager à d'autres dossiers du même partage. Nous isolons ce qui peut l'être.
+Signal technique
+à analyser
+
+----- Section 14 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Clé USB du parking : analysée, sans lien
+La clé USB trouvée sur le parking a été analysée en bac à sable, sans jamais être branchée sur un poste. Elle contient bien un leurre (un faux « bulletin de paie » exécutable), mais aucune trace de connexion de cette clé n'existe sur nos postes : personne ne l'a utilisée.
+
+C'est un appât classique, indépendant de l'intrusion réelle, qui est passée par le VPN prestataire. Piste refermée (FP-7 écartée).
+
+Pression externe
+à traiter
+
+----- Section 16 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Un mail de migration signalé comme suspect
+Signalement à qualifier. Quatre utilisateurs viennent de signaler comme suspect un courriel intitulé « Migration Exchange ». Dans le climat actuel, tout le monde se méfie de tout, et c'est plutôt sain.
+
+Avant de crier au phishing, il faut vérifier l'authenticité de ce message : émetteur, signatures, domaine. Nous tenons les en-têtes complets à votre disposition (voir A-20).
+⚖ Décision de la cellule
+
+----- Section 17 — SOC / Détection -----
+◆ SOC / Détection
+
+Karim Bennis
+Directeur des SI
+Décision · Le poste patient zéro
+Le SOC vient d'identifier FIN-112 comme le premier poste infecté, encore allumé et connecté au réseau. Que faites-vous de ce poste ? Choisissez, votre décision sera tracée.
+L'isoler du réseau, mais le laisser sous tension
+Le laisser connecté pour observer l'attaquant
+L'éteindre immédiatement
+Choix enregistré · la suite est arrivée dans votre fil.
+Signal technique
+à analyser
+
+----- Section 18 — SOC / Détection -----
+◆ SOC / Détection
+Cellule d'investigation · Forensic
+Isolement propre
+Bien vu : débranché du réseau mais laissé allumé, on coupe la propagation tout en préservant la mémoire vive. Je peux encore capturer les processus actifs et les connexions C2 avant qu'elles ne s'effacent. C'est le bon geste. L'équipe Forensic.
+
+Interne / partenaire
+à recouper
+
+----- Section 20 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Les en-têtes du mail de migration signalé comme suspect par plusieurs utilisateurs. Authentique ou pas ?
+LOG
+Vrai courriel de migration IT
+A-20 · Proofpoint · en-têtes bruts RFC 5322
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Vrai courriel de migration IT » classée en fausse piste. Vérifiez qu'aucun détail ne vous échappe avant de l'écarter définitivement.
+🛡️ Comparez ses en-têtes à ceux du hameçonnage : légitime ou pas, et qu'est-ce qui fait la différence ?
+Votre justification : Le message est authentique : il provient de it-support@atlasgrid.ma via le serveur interne mail.atlasgrid.ma (10.20.0.25). Les contrôles SPF, DKIM et DMARC sont tous en réussite, et le lien mène vers https://intranet.atlasgrid.ma/migration. Il annonce une migration à J+7 sans demander d’identifiants ni d’action urgente. À l’inverse du hameçonnage A-11, dont le domaine était atlasgrid-it.info ave confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Service informatique
+preuve à qualifier
+
+----- Section 21 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal de la badgeuse pour la nuit en question, comme vous l'aviez demandé. Lisez bien les notes d'exploitation.
+Journal de la pointeuse
+A-14 · Contrôle d'accès physique · export badgeuse
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous écartez « Journal de la pointeuse » en fausse piste. L'appréciation mérite d'être étayée : quel élément, précisément, ne tient pas ?
+🛡️ Cette badgeuse était-elle fiable cette nuit-là, et un passage de badge prouve-t-il vraiment une présence ?
+Votre justification : Le passage du badge STAG-07 ne prouve pas une présence physique. Le lecteur DATACENTER-1 était en maintenance durant le week-end et les horodatages sont explicitement rejoués depuis un cache local, donc non fiables. Les caméras étaient hors service, le stagiaire était officiellement en congé et aucun événement AD ou EDR ne corrèle cet accès. La piste d’une intrusion physique ne peut pas être établ
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+
+Interne / partenaire
+à recouper
+
+----- Section 24 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal des périphériques USB du service paie, comme demandé. Vérifiez le contexte de la copie.
+Copie de données par le service paie
+A-17 · DLP endpoint · journal des périphériques USB
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Qualification « fausse piste » notée pour « Copie de données par le service paie ». Vous devrez pouvoir l'expliquer en une phrase devant le jury.
+🛡️ Cette copie relève-t-elle de l'attaque, ou d'un usage interne discutable mais sans rapport avec MIRAGE ?
+Votre justification : Le J-1 à 17:20, la clé USB PAIE-SAUVE a été utilisée sur le poste PAIE-STA-3 pour copier bulletins_mois.zip (44 Mo), puis éjectée à 17:24. Cette opération est attribuée au gestionnaire de paie, avec session nominative et badge, et elle est autorisée par le ticket n°1471 « sauvegarde manuelle avant clôture ». Elle se déroule pendant les heures ouvrées et la destination est une clé USB locale, sans confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+
+Interne / partenaire
+à recouper
+
+----- Section 25 — SOC / Détection -----
+◆ SOC / Détection
+Karim Bennis · Directeur des SI
+Ce mail de migration est le nôtre
+Vérifié : ce courriel-là est parfaitement légitime, c'est le nôtre. Il vient bien de notre DSI, depuis notre domaine interne atlasgrid.ma, avec des signatures SPF, DKIM et DMARC toutes valides. C'est l'annonce de notre vraie migration Exchange.
+
+Rien à voir avec le faux courriel du premier jour (A-11), qui venait d'un domaine sosie avec un SPF en échec. C'est justement là tout l'exercice : savoir distinguer le vrai du faux (FP-8 écartée). Karim Bennis, DSI.
+Service informatique
+preuve à qualifier
+
+----- Section 26 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal des travaux de sauvegarde. Il s'est passé quelque chose juste avant l'attaque, à vous de voir quoi.
+Journal des travaux de sauvegarde
+A-05 · Veeam Backup & Replication · job history
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Journal des travaux de sauvegarde » retenue comme preuve. Documentez-en la raison dès maintenant dans la main courante ; c'est ce que le jury examinera.
+🛡️ Vos sauvegardes ont-elles tourné normalement, et jusqu'à quelle date pouvez-vous vraiment remonter ?
+Votre justification : Le J-3 à 01:12, la politique de rétention des sauvegardes a été modifiée par le compte svc_oasisnet. Depuis, les tâches Daily-Backup-Job des J-3, J-2 et J-1 ont été ignorées car exclues par cette nouvelle politique. Le J1 à 03:15, FIN-112 exécute vssadmin delete shadows /all (T1490), puis les dépôts BKP-01 et BKP-02 deviennent injoignables à 15:28. Cette pièce établit une préparation de l’attaqu confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+Fin de journée
+Service informatique
+SOC · détection
+La nuit tombe sur AtlasGrid
+Fin de journée. Un à un, les serveurs de sauvegarde cessent de répondre ; les écrans de supervision virent au rouge, sans que personne ne sache encore pourquoi. Les derniers utilisateurs se déconnectent et rentrent chez eux, persuadés que « ça ira mieux demain ». Dans l'ombre de votre réseau, quelque chose s'est mis en marche cette nuit et ne s'arrêtera plus. Demain matin, plus rien ne sera comme avant.
+LOG
+Service informatique
+preuve à qualifier
+Service informatique · SOC · détection
+Les en-têtes du mail de migration signalé comme suspect par plusieurs utilisateurs. Authentique ou pas ?
+LOG
+Vrai courriel de migration IT
+A-20 · Proofpoint · en-têtes bruts RFC 5322
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Vrai courriel de migration IT » classée en fausse piste. Vérifiez qu'aucun détail ne vous échappe avant de l'écarter définitivement.
+🛡️ Comparez ses en-têtes à ceux du hameçonnage : légitime ou pas, et qu'est-ce qui fait la différence ?
+Votre justification : Le message est authentique : il provient de it-support@atlasgrid.ma via le serveur interne mail.atlasgrid.ma (10.20.0.25). Les contrôles SPF, DKIM et DMARC sont tous en réussite, et le lien mène vers https://intranet.atlasgrid.ma/migration. Il annonce une migration à J+7 sans demander d’identifiants ni d’action urgente. À l’inverse du hameçonnage A-11, dont le domaine était atlasgrid-it.info ave confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Nouveau chapitre
+Acte II
+L'ultimatum
+La rançon tombe. Le compte à rebours démarre.
+Ce matin, plus de doute : des serveurs sont chiffrés, une note exige 20 BTC, un compte à rebours s'affiche. La presse appelle, les clients menacent, l'Autorité veille. Aujourd'hui, il faut trancher : payer ou tenir, notifier ou attendre. Chaque décision s'assume et se trace.
+
+Attaquant
+ne pas répondre seul
+
+----- Section 28 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal du pare-feu que vous avez demandé. Un flux sortant sort vraiment de l'ordinaire, regardez la règle et sa création.
+Journal du pare-feu, canal C2
+A-09 · FortiGate · traffic + policy log
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « preuve » retenu pour « Journal du pare-feu, canal C2 ». Il vous faudra en démontrer la portée : quel fait exact en tirez-vous, et par quoi est-il corroboré ?
+🛡️ Ces connexions sortantes régulières, vers quoi pointent-elles, et depuis quand durent-elles ?
+Votre justification : Le journal du pare-feu montre qu’une règle temporaire OUT-TEMP-443 a été créée à J-11 à 02:03 par svc_oasisnet, depuis FIN-112 vers toute destination HTTPS, avec la journalisation désactivée. À J-1 03:14:07, FIN-112 communique avec 45.137.184.62:443, puis répète des connexions régulières toutes les 60 secondes. Au total, 2 118 sessions sont observées vers la même destination. Le même JA3 est assoc confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Investigation
+preuve à qualifier
+
+----- Section 31 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+L'extrait du SIEM sur les authentifications. À corroborer avec le journal VPN pour recouper les heures et le compte.
+Journal d'authentification (SIEM)
+A-10 · Splunk ES · Windows Security (WinEventLog)
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Qualification « preuve » enregistrée pour « Journal d'authentification (SIEM) ». Distinguez avec soin ce qu'elle prouve de ce qu'elle n'établit pas.
+🛡️ Quel compte, depuis quelles adresses IP, et l'authentification forte était-elle en place ou absente ?
+Votre justification : L’extrait SIEM confirme les accès anormaux observés dans le VPN. Le compte svc_oasisnet ouvre des sessions de type 10 (RemoteInteractive) à J-21 à 02:04 et à J-14 à 01:57, en dehors de sa plage légitime 09:00–18:00. Plus de 90 ouvertures similaires entre 02:00 et 05:00 sont recensées sur les 21 derniers jours. À J-1 03:12, admin_local reçoit des privilèges spéciaux et lance C:\Windows\svhost32.exe confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+Signal technique
+à analyser
+
+----- Section 32 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Rapport de l'équipe de nuit
+Rapport de l'équipe de nuit, transmis à la relève. Au petit matin, 23 serveurs sont inaccessibles ; les partages affichent massivement l'extension « .mirage » et une note de rançon identique se retrouve dans chaque dossier.
+
+Les systèmes de supervision étaient passés au rouge vers 03h15. Le détail machine par machine (paie, facturation, fichiers, ERP…) figure dans l'inventaire d'impact que nous avons préparé (artefact A-13).
+Service informatique
+preuve à qualifier
+
+----- Section 33 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal des transferts sortants des dernières nuits. Les volumes m'inquiètent : plusieurs dizaines de gigaoctets partis vers la même adresse.
+Journal des transferts sortants (proxy)
+A-03 · Proxy web (Zscaler) · access.log
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « preuve » retenu pour « Journal des transferts sortants (proxy) ». Il vous faudra en démontrer la portée : quel fait exact en tirez-vous, et par quoi est-il corroboré ?
+🛡️ Regardez le volume et l'horaire des flux sortants : avant ou après le chiffrement, et vers où partent-ils ?
+Votre justification : Le journal proxy Zscaler montre des transferts sortants pendant dix nuits, entre 00:00 et 06:00, depuis FIN-112 puis FILER-RBT vers la même destination 45.137.184.62:443. Les connexions utilisent TLS, le même JA3 a0e9f5d2b3c1e847f6... et le SNI cdn-sync-eu.storage-blob[.]net. Le volume total atteint 117,8 Go : 11,2 Go, 12,8 Go, 9,7 Go, 13,4 Go, 12,1 Go, 10,9 Go, 14,0 Go, 12,6 Go, 11,8 Go et 9,3 Go confiance : sûr
+Le RSSI : Vous vous appuyez sur des éléments concrets : c'est la bonne démarche. Reste à confirmer que ces indices convergent avec les autres pièces.
+Service informatique
+preuve à qualifier
+
+----- Section 38 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Suspicion de DDoS sur le site public
+Alerte de supervision. Notre site public www.atlasgrid.ma encaisse depuis ce matin un pic de trafic massif, près de quarante fois la normale. Le premier réflexe est de penser à une attaque par saturation (DDoS) qui viendrait s'ajouter au reste.
+
+Nous analysons l'origine et le profil des requêtes. L'export d'analyse est disponible si vous voulez creuser (voir A-16).
+Service informatique
+preuve à qualifier
+
+----- Section 39 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le rapport de trafic du site public, suite à l'alerte de ce matin. Regardez d'où viennent les visiteurs.
+Alerte « DDoS » sur le site public
+A-16 · Cloudflare + WAF · analytics
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Alerte « DDoS » sur le site public » classée en fausse piste. Vérifiez qu'aucun détail ne vous échappe avant de l'écarter définitivement.
+🛡️ Une saturation du site public a-t-elle un lien avec un chiffrement interne, ou est-ce un tout autre sujet ?
+Votre justification : Le pic de trafic atteint 38 fois la normale, mais il provient principalement d’un article de maghreb-eco.ma. Les requêtes sont des GET vers la page d’accueil, sans POST ni authentification. Le score moyen indique des visiteurs probablement humains, le cache absorbe 96 % du trafic, le CPU reste nominal et aucune règle WAF ou limitation n’a été déclenchée. Il s’agit donc d’une hausse légitime de fré confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Signal technique
+à analyser
+
+----- Section 40 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Un compte d'ancien salarié actif ?
+Remontée du SOC à vérifier. Le webmail enregistre deux connexions récentes sur le compte d'un ancien directeur des SI, a.elomrani, parti depuis plusieurs mois.
+
+Cela paraît suspect au premier abord et mérite une vérification d'urgence : ce compte aurait dû être fermé. Nous tenons à votre disposition l'export détaillé des ouvertures de session pour trancher (voir A-15).
+
+Interne / partenaire
+à recouper
+
+----- Section 51 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Les alertes de notre sonde réseau, pour écarter ou confirmer une piste d'intrusion par le périmètre.
+Scan Internet de fond
+A-21 · IDS Suricata · alertes réseau
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Scan Internet de fond » classée en bruit. Conservez-la à l'esprit : un élément anodin peut prendre son sens au regard d'une autre pièce.
+🛡️ Un balayage de fond depuis Internet, tout le monde en reçoit. Y a-t-il ici un ciblage particulier d'AtlasGrid ?
+Votre justification : Les alertes correspondent à un balayage Internet générique provenant d’infrastructures Censys/Shodan. Elles concernent uniquement les IP publiques, avec des paquets SYN sans poignée de main ni tentative d’identification. Aucun actif interne n’a été atteint et aucun ciblage particulier d’AtlasGrid n’est démontré. Cet événement est sans lien établi avec MIRAGE. confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+Service informatique
+preuve à qualifier
+
+----- Section 52 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+L'alerte EDR sur l'outil d'admin, comme demandé. Regardez surtout qui l'a lancé et quand.
+Outil d'administration signalé
+A-25 · EDR · file d'alertes
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Outil d'administration signalé » classée en bruit. Conservez-la à l'esprit : un élément anodin peut prendre son sens au regard d'une autre pièce.
+🛡️ Cet outil est-il utilisé par l'attaquant, ou fait-il partie de l'administration légitime du SI ?
+Votre justification : L’alerte concerne une activité d’administration légitime, réalisée par admin_it pendant les heures ouvrées et couverte par le ticket de maintenance #4502. L’outil PsExec est officiel et signé. Aucune écriture .mirage ni aucun flux C2 n’est observé. L’événement est réel mais sans lien avec MIRAGE. confiance : sûr
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+⚖ Décision de la cellule
+
+----- Section 54 — SOC / Détection -----
+◆ SOC / Détection
+Karim Bennis · Directeur des SI
+Ordre de virement : une arnaque, pas MIRAGE
+Le fameux ordre de virement « urgent du PDG » est une arnaque au président : domaine sosie, adresse de réponse détournée, pression sur le délai. La PDG confirme n'avoir rien envoyé. La finance a bloqué le virement, et le mail a été remonté à notre banque.
+
+C'est une fraude qui profite du chaos, techniquement distincte du rançongiciel. Elle n'aide en rien à comprendre MIRAGE : ne mélangez pas les deux dossiers. Piste refermée (FP-11 écartée). Karim Bennis, DSI.
+
+Interne / partenaire
+à recouper
+
+----- Section 57 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Le journal de la suppression de fichiers. À recouper avec les tickets d'exploitation.
+Suppression massive de fichiers
+A-27 · Serveur de fichiers · journal
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Suppression massive de fichiers » classée en bruit. Conservez-la à l'esprit : un élément anodin peut prendre son sens au regard d'une autre pièce.
+🛡️ Cet effacement de fichiers est-il malveillant, ou une opération planifiée d'archivage ou de ménage ?
+Votre justification : L’événement correspond à une opération d’archivage trimestriel autorisée par la DSI, avec le ticket #4381. Les fichiers sont déplacés vers le volume ARCHIVE, sans chiffrement, sans extension .mirage et sans flux vers 45.137.x.x. Il s’agit d’une activité légitime, sans lien avec MIRAGE. confiance : sûr
+Le RSSI : Vous vous appuyez sur des éléments concrets : c'est la bonne démarche. Reste à confirmer que ces indices convergent avec les autres pièces.
+
+Pression externe
+à traiter
+
+----- Section 59 — SOC / Détection -----
+◆ SOC / Détection
+Karim Bennis · Directeur des SI
+Je révise mon analyse
+Je dois revenir sur ce que je vous ai dit hier, et je le fais sans détour : je me suis trompé de diagnostic. Ce n'est pas une simple maintenance qui a mal tourné.
+
+La piste d'un accès prestataire compromis ne peut plus être écartée. Je propose qu'on regarde de très près les journaux du VPN d'administration et les authentifications du compte svc_oasisnet. Si vous voulez ces éléments, demandez-les au SOC, je fais le lien.
+
+Karim Bennis, DSI.
+
+Interne / partenaire
+à recouper
+
+----- Section 63 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+La connexion depuis l'étranger que vous vouliez vérifier. Regardez le contexte avant de conclure.
+Connexion depuis l'étranger
+A-26 · Azure AD · sign-in logs
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Verdict « bruit » pour « Connexion depuis l'étranger ». Ne l'écartez pas trop vite : un faux positif se justifie, lui aussi.
+🛡️ Cette connexion depuis l'étranger correspond-elle à un déplacement connu, ou à une véritable anomalie ?
+Votre justification : Les connexions depuis Paris concernent Y. Tahiri, directeur commercial, dont le profil prévoit des déplacements. L’appareil est connu, les connexions ont lieu pendant les heures ouvrées et l’activité se limite à la lecture de courriels. Aucun rôle privilégié ni aucune action suspecte n’est observé. Aucun lien avec MIRAGE n’est établi. confiance : sûr
+Le RSSI : Argumentation reçue. Sa solidité dépendra de sa capacité à tenir face aux éléments à venir ; ne vous y enfermez pas.
+⚖ Décision de la cellule
+
+----- Section 65 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+OasisNet vous transfère une alerte ransomware. Elle vous concerne, ou pas ?
+Ticket « ransomware » transféré par l'infogérant
+A-40 · OasisNet (infogérance) · ticket transféré
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+Vous qualifiez « Ticket « ransomware » transféré par l'infogérant » de bruit. Recevable, mais le bruit masque parfois un signal : confirmez qu'il n'y a rien d'exploitable.
+🛡️ Ce ticket vient de l'infogérant : concerne-t-il VRAIMENT un actif d'AtlasGrid, ou un autre client ? Sur quoi vous appuyez-vous pour ne pas mélanger deux crises ?
+Votre justification : Le ticket concerne un autre client du parc mutualisé OasisNet. L’extension observée est .lockb, différente de .mirage, et aucun actif AtlasGrid n’est lié au ticket. Il s’agit d’un transfert automatique d’information, sans lien avec notre incident. confiance : sûr
+Le RSSI : Bien reçu. Je ne confirmerai ni n'infirmerai à ce stade : la cohérence d'ensemble se jugera au recoupement avec les autres pièces.
+
+Interne / partenaire
+à recouper
+
+----- Section 75 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Un salarié affirme que sa souris bouge seule : un attaquant en direct ?
+Poste « qui bouge tout seul » signalé en panique
+A-41 · Support IT · journal d'accès distant
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Poste « qui bouge tout seul » signalé en panique » classée en bruit. Conservez-la à l'esprit : un élément anodin peut prendre son sens au regard d'une autre pièce.
+🛡️ Une souris qui bouge seule : qu'est-ce qui, dans les journaux, distingue une prise en main LÉGITIME d'un accès pirate ? Avez-vous vérifié le ticket et le compte de l'opérateur ?
+Votre justification : Le mouvement de la souris correspond à une session d’assistance à distance autorisée par la DSI. La session est liée au ticket HELP-3391 concernant une imprimante, réalisée par support_N1, depuis une IP interne avec MFA valide. Aucun indice d’accès malveillant ou de lien avec MIRAGE n’est observé.
+Le RSSI : Raisonnement documenté. Solide sur la forme ; le fond se confirmera à la lumière des pièces suivantes.
+
+Interne / partenaire
+à recouper
+
+----- Section 76 — SOC / Détection -----
+◆ SOC / Détection
+Karim Bennis · Directeur des SI
+Ex-salarié : jeton résiduel, pas lié
+Vérification terminée. Le compte de l'ancien DSI était bien désactivé dans l'annuaire ; les deux connexions proviennent d'un ancien jeton mobile qui n'avait jamais été révoqué, sur un téléphone personnel.
+
+C'est un vrai défaut d'hygiène que nous corrigerons (révocation systématique au départ), mais il n'y a aucune action privilégiée ni aucun lien avec MIRAGE. Piste refermée (FP-4 écartée). Karim Bennis, DSI.
+Service informatique
+preuve à qualifier
+
+----- Section 77 — SOC / Détection -----
+◆ SOC / Détection
+Service informatique · SOC · détection
+Une alerte antivirus sur un serveur de build. À trancher : vraie menace ou faux positif ?
+Faux positif « cryptominer »
+A-22 · Antivirus · file d'alertes
+Votre verdict :
+Preuve
+Fausse piste
+Bruit
+« Faux positif « cryptominer » » classée en bruit. Conservez-la à l'esprit : un élément anodin peut prendre son sens au regard d'une autre pièce.
+🛡️ Cette alerte est-elle confirmée par un autre signal, ou est-ce le classique faux positif d'antivirus ?
+Votre justification : L’alerte PUA:Win32/CoinMiner concerne 7z.exe, signé par Igor Pavlov, avec une signature valide et un score VirusTotal de 0/72. La charge CPU correspond à une compilation nocturne planifiée sur SRV-BUILD-02. Aucun fichier .mirage, aucun flux C2 et aucun lien avec svc_oasisnet ne sont observés. Il s’agit d’un faux positif antivirus, sans lien avec MIRAGE. confiance : sûr
+Le RSSI : Vous citez des éléments techniques précis, c'est ce que le jury attend. Je ne tranche pas : vérifiez qu'ils tiennent ensemble.
+
+Interne / partenaire
+à recouper
