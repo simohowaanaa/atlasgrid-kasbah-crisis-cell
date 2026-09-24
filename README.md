@@ -1,8 +1,15 @@
 <div align="center">
 
+<p>
+  <img src="assets/logos/emsi.png" alt="EMSI" height="38">&nbsp;&nbsp;&nbsp;
+  <img src="assets/logos/cybersup.png" alt="CyberSup" height="38">
+</p>
+
 # AtlasGrid — Cellule de crise MIRAGE
 
 **Dossier d'incident • Exercice KASBAH • AtlasGrid, entreprise fictive**
+
+*Exercice organisé par EMSI et CyberSup.*
 
 [Accéder à la chronologie](CHRONOLOGIE_PREUVES.md) · [Voir les preuves](preuves_retenues/) · [Préparer la cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md)
 
