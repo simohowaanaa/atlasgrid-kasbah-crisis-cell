@@ -1,9 +1,16 @@
 <div align="center">
 
-<p>
-  <img src="assets/logos/emsi.png" alt="EMSI" height="38">&nbsp;&nbsp;&nbsp;
-  <img src="assets/logos/cybersup.png" alt="CyberSup" height="38">
-</p>
+<table align="center" cellpadding="10">
+  <tr>
+    <td align="center" bgcolor="#FFFFFF">
+      <img src="assets/logos/emsi.png" alt="EMSI" height="64">
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td align="center" bgcolor="#FFFFFF">
+      <img src="assets/logos/cybersup.png" alt="CyberSup" height="64">
+    </td>
+  </tr>
+</table>
 
 # AtlasGrid — Cellule de crise MIRAGE
 
