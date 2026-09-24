@@ -19,6 +19,7 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 | Construire la cartographie du SI | [Brief de cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md) |
 | Comprendre les systèmes et dépendances | [Référence cartographie](cartographie_SI/REFERENCE_CARTOGRAPHIE_SI.md) |
 | Reconstituer l'attaque | [Chronologie des preuves](CHRONOLOGIE_PREUVES.md) |
+| Revoir tous les événements de l'exercice | [Fiche de chronologie complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md) |
 | Consulter la synthèse de crise | [Mémoire de crise MIRAGE](MEMOIRE_INCIDENT_MIRAGE.md) |
 | Préparer les quatre rendus | [Guide des rendus](presentations/02_rendus_ecrits/README.md) |
 | Préparer l'oral final | [Guide de présentation](presentations/01_presentation_finale/README.md) |
@@ -31,6 +32,7 @@ Ce dépôt rassemble les travaux de la cellule de crise AtlasGrid : preuves, fau
 | [`fausses_pistes/`](fausses_pistes/) | Les 8 pistes examinées puis écartées, leurs fiches de qualification et leur méthode d'analyse. |
 | [`bruits/`](bruits/) | Les 7 signaux sans lien établi avec MIRAGE, leurs fiches de triage et leur méthode de qualification. |
 | [`decisions/`](decisions/) | Les 8 captures de décision, leurs fiches d'argumentation et les références de conformité. |
+| [`chronologie_complete/`](chronologie_complete/) | La fiche de chronologie complète et la galerie de toutes les captures. |
 | [`cartographie_SI/`](cartographie_SI/) | Le dossier de prise de poste, l'inventaire et le brief de production de la cartographie. |
 | [`poles_cellule/`](poles_cellule/) | Les six pôles, leurs captures, notes de décision et informations complètes du fil. |
 | [`presentations/`](presentations/) | Les supports HTML, leurs consignes et le plan de travail. |
