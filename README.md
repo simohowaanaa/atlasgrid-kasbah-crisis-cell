@@ -41,6 +41,7 @@
 | J-3 | Sabotage de la rétention des sauvegardes | A-05 |
 | J-1 · 03:12 | Détection et chiffrement MIRAGE sur FIN-112 | A-01, A-04, A-12 |
 | J2 | Publication d'un échantillon sur SIROCCO | A-07 |
+| J3 | Sauvegardes en ligne compromises ; reprise depuis Settat décidée | A-06, A-30 |
 
 > La chronologie complète distingue les faits confirmés, les hypothèses, les fausses pistes et le bruit : [ouvrir la fiche complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md).
 
@@ -50,7 +51,7 @@
 |---|---|---|
 | Établir les faits | [preuves_retenues/](preuves_retenues/) | 12 fiches de preuve, leurs captures et leur argumentation. |
 | Comprendre ce qui a été écarté | [fausses_pistes/](fausses_pistes/) · [bruits/](bruits/) | Les signaux étudiés, leur vérification et leur verdict. |
-| Justifier les arbitrages | [decisions/](decisions/) | 8 décisions de crise, leurs captures et leur base de conformité. |
+| Justifier les arbitrages | [decisions/](decisions/) | Les décisions de crise et de reprise, leurs captures et leur base de conformité. |
 | Retracer tout l'exercice | [chronologie_complete/](chronologie_complete/) | Fiche détaillée et galerie des captures. |
 | Construire la cartographie | [cartographie_SI/](cartographie_SI/) | Inventaire, consignes et dépendances du SI. |
 | Travailler par responsabilité | [poles_cellule/](poles_cellule/) | Les six pôles, leurs notes et leurs éléments utiles. |

@@ -238,6 +238,50 @@ L'échantillon de données clients et contractuelles est réel. Les 300 Go annon
 
 ![A-07 — Leak site SIROCCO](../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png)
 
+## 5. Acte III — Reconstruction et reprise
+
+### 30 — A-06 : registre des moyens de sauvegarde — Preuve
+
+La sauvegarde en ligne est indisponible depuis J-3. La copie LTO-9 de Settat est hors réseau, date de J-42 et n'a pas été testée : elle doit être utilisée avec une reprise prudente.
+
+![A-06 — Registre des sauvegardes](../assets/captures/preuves/32_A06_registre_moyens_sauvegarde.png)
+
+### 31 — Message SIROCCO encodé — À traiter en cryptographie
+
+Le message est conservé sous sa forme source, encodée en Base64. Il ne doit pas être interprété comme une preuve supplémentaire avant décodage et recoupement.
+
+![Message SIROCCO encodé](../assets/captures/cryptographie/33_SIROCCO_message_base64_a_decoder.png)
+
+### 32 — A-30 : intégrité des sauvegardes en ligne — Preuve
+
+Les points en ligne les plus récents sont suspect ou infecté. Une restauration depuis ces points peut réintroduire MIRAGE ; l'air-gap de Settat n'est pas concerné.
+
+![A-30 — Analyse d'intégrité](../assets/captures/preuves/35_A30_integrite_sauvegardes_en_ligne.png)
+
+### 33 — Décisions de reprise
+
+La Direction refuse de payer. La reprise utilise la copie air-gap de Settat, puis restaure le cœur ERP avant la paie et la facturation.
+
+![Décision — Ne pas payer](../assets/captures/decisions/09_direction_ne_pas_payer.png)
+
+![Plan de reprise — Settat](../assets/captures/decisions/10_plan_reprise_airgap_Settat.png)
+
+![Décision — ERP en priorité](../assets/captures/decisions/11_priorite_restauration_ERP.png)
+
+![Décision — Choix air-gap](../assets/captures/decisions/12_choix_airgap_Settat.png)
+
+![Séquence de reprise ERP](../assets/captures/decisions/13_sequence_reprise_ERP.png)
+
+### 34 — Bruits de l'acte III
+
+Les activités de `svc_backup`, l'alerte macro historique de DG-01 et le trafic Microsoft correspondent respectivement à une tâche Veeam attendue, une alerte déjà nettoyée et de la télémétrie Windows légitime.
+
+![A-28 — svc_backup](../assets/captures/bruits/31_A28_svc_backup_planifie.png)
+
+![A-31 — Macro DG-01](../assets/captures/bruits/32_A31_macro_DG01_historique.png)
+
+![A-29 — Trafic Microsoft](../assets/captures/bruits/33_A29_trafic_Microsoft_legitime.png)
+
 ## Vérification de lecture
 
 - Les événements datés techniquement doivent être cités à partir de la [chronologie technique](FICHE_CHRONOLOGIE_COMPLETE.md#1-chronologie-technique-reconstituée).

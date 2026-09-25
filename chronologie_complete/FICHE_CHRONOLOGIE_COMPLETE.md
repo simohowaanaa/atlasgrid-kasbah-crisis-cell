@@ -2,7 +2,7 @@
 
 ## Portée du document
 
-Cette fiche reconstitue tous les événements matériels des **actes I et II** de l'exercice, depuis la prise de poste de la cellule jusqu'à la notification de l'Autorité et à la publication SIROCCO. L'acte final n'a pas encore été fourni dans les éléments source : il n'est donc pas inventé ici.
+Cette fiche reconstitue les événements matériels des **actes I, II et III** de l'exercice, depuis la prise de poste de la cellule jusqu'aux choix de reprise après le refus de payer la rançon.
 
 Deux chronologies sont nécessaires :
 
@@ -34,6 +34,8 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 | J2, 10:00 | L'inventaire constate 23 serveurs chiffrés sur 40, dont paie, facturation, ERP et serveurs de fichiers. L'OT/SCADA reste isolé et intact ; MSG-01 et DC-01 sont dégradés. | Preuve A-13 | [Impact](../assets/captures/preuves/12_A13_inventaire_serveurs_impact.png) |
 | J2, 10:15 | Une fraude au président demande 480 000 MAD. Le virement est bloqué. C'est un incident financier confirmé mais distinct de la chaîne MIRAGE. | Preuve A-23 | [BEC](../assets/captures/preuves/18_A23_BEC_fraude_au_president.png) |
 | J2, 15:20 | SIROCCO publie un échantillon de 2 400 lignes de données clients et contractuelles. Cela corrobore l'exposition ; le volume de 300 Go affiché par le groupe reste non confirmé. | Preuve A-07 | [Leak site](../assets/captures/preuves/31_A07_leaksite_SIROCCO_donnees_clients.png) |
+| J3, 09:30 | L'inventaire de reprise indique que la sauvegarde en ligne est indisponible depuis J-3. La copie LTO-9, isolée à Settat, date de J-42 et n'a jamais été testée ; elle reste néanmoins séparée du réseau compromis. | Preuve A-06 | [Registre](../assets/captures/preuves/32_A06_registre_moyens_sauvegarde.png), [air-gap](../assets/captures/preuves/34_A06_copie_airgap_Settat.png) |
+| J3 | L'analyse Veeam établit que le point RP-J-1 est suspect et que RP-J-0 est infecté par MIRAGE. Restaurer depuis ces points risquerait de réintroduire le rançongiciel. | Preuve A-30 | [Analyse d'intégrité](../assets/captures/preuves/35_A30_integrite_sauvegardes_en_ligne.png) |
 
 ## 2. Chronologie du déroulé de l'exercice
 
@@ -51,6 +53,7 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 | **66–74 — Attribution prudente et presse** | La piste d'un salarié en litige est vérifiée. DarkAtlas revendique l'attaque, mais son échantillon et ses indicateurs ne concordent pas. L'assureur ouvre le dossier. Maghreb Éco demande une réaction avant 17:00 ; AtlasGrid répond factuellement. | A-24 et A-18 sont écartées. Décision : donner une version vérifiée à la presse ; l'article reste équilibré. |
 | **75–82 — Assistance, faux positif et client** | Une prise en main distante est validée par le ticket HELP-3391 et MFA ; un faux positif CoinMiner est attribué à 7-Zip et une compilation planifiée. Le client Chérifienne des Mines demande une garantie ; la cellule répond avec les faits confirmés et un calendrier de mise à jour. | A-41 et A-22 sont des bruits. Décision : réponse client factuelle, sans attestation non prouvée. |
 | **83–89 — Autorité et preuve d'exposition** | L'Autorité demande des éléments sous 72 h. La cellule notifie immédiatement, l'accusé de réception est favorable. DarkAtlas est définitivement invalidé. SIROCCO publie ensuite l'échantillon A-07. | Décision : notification transparente et évolutive. A-07 corrobore le risque d'exposition. |
+| **Acte III — Reconstruire** | Les sauvegardes sont inventoriées puis analysées. La cellule refuse de payer, retient la copie air-gap de Settat et priorise le cœur ERP, dont dépendent la paie et la facturation. | Reprise à partir de l'air-gap : AD, ERP et base, paie/facturation, puis partages de fichiers. ETA annoncée : 5 à 10 jours ; perte de données estimée : six semaines. |
 
 ## 3. Décisions à replacer dans la chronologie
 
@@ -64,6 +67,9 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 | Répondre à la presse | Séquences 66–74 | Ne pas laisser une revendication externe devenir le seul récit public. | [Capture](../assets/captures/decisions/06_communication_presse_repondre_version.png) |
 | Répondre factuellement au client | Séquences 75–82 | Informer sans attester une absence d'exposition non établie. | [Capture](../assets/captures/decisions/07_reponse_client_rester_factuel.png) |
 | Notifier l'Autorité avec les faits connus | Séquences 83–89 | Respecter le délai de 72 h propre à l'exercice et compléter l'analyse ensuite. | [Capture](../assets/captures/decisions/08_notification_autorite_transparente.png) |
+| Ne pas payer la rançon | Acte III | Aucune garantie de déchiffrement ou d'effacement ; la reprise hors ligne évite de financer l'extorsion. | [Capture](../assets/captures/decisions/09_direction_ne_pas_payer.png) |
+| Restaurer le cœur ERP en priorité | Acte III | ERP constitue le socle commun dont dépendent la paie et la facturation. | [Capture](../assets/captures/decisions/11_priorite_restauration_ERP.png) |
+| Restaurer depuis l'air-gap de Settat | Acte III | Les derniers points en ligne sont suspects ou infectés ; l'air-gap est la source indépendante. | [Capture](../assets/captures/decisions/12_choix_airgap_Settat.png) |
 
 ## 4. Points à retenir pour l'oral
 
@@ -71,6 +77,6 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 2. Le phishing A-11 est confirmé, mais il ne doit pas être présenté comme la porte d'entrée technique démontrée.
 3. Le volume objectivé est 117,8 Go ; les 300 Go annoncés par SIROCCO sont une revendication non confirmée.
 4. Les fausses pistes, les bruits et les incidents parallèles sont conservés parce qu'ils démontrent une méthode de triage rigoureuse.
-5. La galerie contient toutes les captures de l'exercice et les huit captures de décision, dans l'ordre de leur apparition ou de leur traitement.
+5. La galerie contient les captures des actes I à III, y compris les décisions de reprise et les pièces A-06 et A-30.
 
 Voir la [galerie de toutes les captures](GALERIE_CAPTURES.md) et les fiches détaillées dans [`preuves_retenues/`](../preuves_retenues/), [`fausses_pistes/`](../fausses_pistes/), [`bruits/`](../bruits/) et [`decisions/`](../decisions/).
