@@ -7,6 +7,7 @@ Dernière consolidation : 25 septembre 2026. Ce dossier couvre les actes I, II e
 - Incident de ransomware nommé **MIRAGE**, avec extension `.mirage`, affectant 23 serveurs sur 40.
 - Les fonctions métier directement touchées sont la paie (PAIE-01), la facturation (FACT-02), les partages de fichiers (FILER-RBT-02 et FILER-CASA-01) et l'ERP (ERP-APP-01 et ERP-DB-01). MSG-01 et DC-01 sont dégradés ; DC-02, WEB-PUB-01 et SCADA-HMI restent intacts.
 - Les sauvegardes ont été sabotées : `svc_oasisnet` a modifié la rétention à J-3 ; les trois derniers travaux ont été ignorés ; BKP-01 et BKP-02 sont injoignables. FIN-112 a aussi exécuté `vssadmin delete shadows /all`.
+- Le rapport préliminaire d'OasisNet indique qu'un technicien a saisi ses identifiants sur un portail contrefait à J-42 ; le secret du compte partagé `svc_oasisnet` aurait ensuite été extrait. Le périmètre exact côté prestataire reste à confirmer.
 - L'accès `svc_oasisnet` présente des connexions VPN nocturnes non conformes, sans MFA, depuis des IP inhabituelles. Le compte a créé la règle `OUT-TEMP-443`, utilisée ensuite par FIN-112 pour joindre `45.137.184.62:443`.
 - Les journaux proxy établissent une exfiltration suspectée de **117,8 Go** sur dix nuits, d'abord depuis FIN-112 puis depuis FILER-RBT, vers `45.137.184.62:443`, SNI `cdn-sync-eu.storage-blob[.]net`, même JA3.
 - FIN-112 est le patient zéro établi : le binaire non signé `C:\Windows\svhost32.exe` est lancé à J-1 03:12, Defender est neutralisé, des fichiers sont lus puis renommés en `.mirage`, les mécanismes de récupération sont supprimés et une note MIRAGE est créée.
@@ -16,6 +17,7 @@ Dernière consolidation : 25 septembre 2026. Ce dossier couvre les actes I, II e
 
 | Moment | Fait établi | Source |
 |---|---|---|
+| J-42 | Compromission initiale rapportée chez OasisNet : hameçonnage d'un technicien, accès à la console d'infogérance, puis extraction possible du secret partagé `svc_oasisnet`. | A-08, à confirmer |
 | J-21 à J-1 | Connexions VPN nocturnes anormales de `svc_oasisnet`, sans MFA ; plus de 90 sessions de type 10 sur 21 jours. | A-02, A-10 |
 | J-11 02:03 | Création par `svc_oasisnet` de la règle `OUT-TEMP-443`, sans journalisation, de FIN-112 vers HTTPS. | A-09 |
 | J-10 à J-1 | Exfiltration nocturne totalisant 117,8 Go vers `45.137.184.62:443`. | A-03 |
@@ -35,6 +37,7 @@ Dernière consolidation : 25 septembre 2026. Ce dossier couvre les actes I, II e
 | A-04 | Preuve | Horodatages NTFS incohérents sur `LISEZMOI_MIRAGE.txt`, attribué à `svc_oasisnet` sur FILER-RBT-02. |
 | A-05 | Preuve | Sabotage de la rétention des sauvegardes et indisponibilité des dépôts. |
 | A-07 | Preuve | Échantillon SIROCCO avec données clients/contractuelles ; exposition corroborée à préserver. |
+| A-08 | Preuve à confirmer | Rapport préliminaire OasisNet : compromission de la console d'infogérance et extraction du secret `svc_oasisnet` après hameçonnage d'un technicien. |
 | A-09 | Preuve | Règle OUT-TEMP-443 créée par `svc_oasisnet` et C2 régulier de FIN-112. |
 | A-10 | Preuve | Sessions RemoteInteractive, privilèges spéciaux, lancement de `svhost32.exe` et effacement du journal de sécurité. |
 | A-11 | Preuve | Phishing `atlasgrid-it.info` : SPF/DMARC en échec, DKIM absent, demande d'identifiants. |

@@ -22,6 +22,7 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 
 | Moment | Événement établi et explication | Qualification | Captures / dossiers |
 |---|---|---|---|
+| J-42 | Le rapport préliminaire d'OasisNet rapporte le hameçonnage d'un technicien et l'extraction possible du secret partagé `svc_oasisnet` depuis la console d'infogérance. L'étendue exacte côté prestataire reste ouverte. | Preuve A-08, à confirmer | [Rapport OasisNet](../assets/captures/preuves/36_A08_rapport_preliminaire_OasisNet.png) |
 | J-21 à J-1, nuits | Le compte prestataire `svc_oasisnet` ouvre des sessions VPN entre environ 02:00 et 05:00, sans MFA et depuis des IP incompatibles avec son profil. Les événements SIEM confirment plus de 90 ouvertures RemoteInteractive. | Preuve A-02, A-10 | [VPN](../assets/captures/preuves/04_A02_VPN_svc_oasisnet_anormal.png), [SIEM](../assets/captures/preuves/13_A10_SIEM_acces_svc_oasisnet.png) |
 | J-11, 02:03 | `svc_oasisnet` crée la règle `OUT-TEMP-443` depuis FIN-112 vers HTTPS, avec journalisation désactivée. Cette préparation permet ensuite une communication sortante non contrôlée. | Preuve A-09 | [Pare-feu](../assets/captures/preuves/10_A09_regle_firewall_C2.png) |
 | J-10 à J-1, nuits | FIN-112 puis FILER-RBT transfèrent au total **117,8 Go** vers `45.137.184.62:443`, avec le même SNI et la même empreinte JA3. Le volume est établi ; le contenu précis et les 300 Go revendiqués ne le sont pas encore. | Preuve A-03 | [Proxy](../assets/captures/preuves/14_A03_proxy_exfiltration_117_8Go.png) |
@@ -53,7 +54,7 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 | **66–74 — Attribution prudente et presse** | La piste d'un salarié en litige est vérifiée. DarkAtlas revendique l'attaque, mais son échantillon et ses indicateurs ne concordent pas. L'assureur ouvre le dossier. Maghreb Éco demande une réaction avant 17:00 ; AtlasGrid répond factuellement. | A-24 et A-18 sont écartées. Décision : donner une version vérifiée à la presse ; l'article reste équilibré. |
 | **75–82 — Assistance, faux positif et client** | Une prise en main distante est validée par le ticket HELP-3391 et MFA ; un faux positif CoinMiner est attribué à 7-Zip et une compilation planifiée. Le client Chérifienne des Mines demande une garantie ; la cellule répond avec les faits confirmés et un calendrier de mise à jour. | A-41 et A-22 sont des bruits. Décision : réponse client factuelle, sans attestation non prouvée. |
 | **83–89 — Autorité et preuve d'exposition** | L'Autorité demande des éléments sous 72 h. La cellule notifie immédiatement, l'accusé de réception est favorable. DarkAtlas est définitivement invalidé. SIROCCO publie ensuite l'échantillon A-07. | Décision : notification transparente et évolutive. A-07 corrobore le risque d'exposition. |
-| **Acte III — Reconstruire** | Les sauvegardes sont inventoriées puis analysées. La cellule refuse de payer, retient la copie air-gap de Settat et priorise le cœur ERP, dont dépendent la paie et la facturation. | Reprise à partir de l'air-gap : AD, ERP et base, paie/facturation, puis partages de fichiers. ETA annoncée : 5 à 10 jours ; perte de données estimée : six semaines. |
+| **Acte III — Reconstruire** | Les sauvegardes sont inventoriées puis analysées. La cellule refuse de payer, retient la copie air-gap de Settat et priorise le cœur ERP, dont dépendent la paie et la facturation. OasisNet transmet ensuite son rapport préliminaire et le client valide une reprise progressive. | Reprise à partir de l'air-gap : AD, ERP et base, paie/facturation, puis partages de fichiers ; reconnection client par paliers et points de contrôle. ETA annoncée : 5 à 10 jours ; perte de données estimée : six semaines. |
 
 ## 3. Décisions à replacer dans la chronologie
 
@@ -70,6 +71,7 @@ Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.m
 | Ne pas payer la rançon | Acte III | Aucune garantie de déchiffrement ou d'effacement ; la reprise hors ligne évite de financer l'extorsion. | [Capture](../assets/captures/decisions/09_direction_ne_pas_payer.png) |
 | Restaurer le cœur ERP en priorité | Acte III | ERP constitue le socle commun dont dépendent la paie et la facturation. | [Capture](../assets/captures/decisions/11_priorite_restauration_ERP.png) |
 | Restaurer depuis l'air-gap de Settat | Acte III | Les derniers points en ligne sont suspects ou infectés ; l'air-gap est la source indépendante. | [Capture](../assets/captures/decisions/12_choix_airgap_Settat.png) |
+| Rouvrir progressivement les services clients | Acte III | Reconnecter par paliers après validation de sécurité et de stabilité à chaque étape. | [Capture](../assets/captures/decisions/15_reprise_progressive_client_cherifienne.png) |
 
 ## 4. Points à retenir pour l'oral
 

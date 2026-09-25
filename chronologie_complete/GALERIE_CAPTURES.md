@@ -282,6 +282,18 @@ Les activités de `svc_backup`, l'alerte macro historique de DG-01 et le trafic 
 
 ![A-29 — Trafic Microsoft](../assets/captures/bruits/33_A29_trafic_Microsoft_legitime.png)
 
+### 35 — A-08 : rapport préliminaire d'OasisNet — Preuve à confirmer
+
+Le rapport explique un vecteur initial plausible : hameçonnage d'un technicien OasisNet, accès à la console d'infogérance puis compromission possible du secret partagé `svc_oasisnet`. Son périmètre reste ouvert.
+
+![A-08 — Rapport préliminaire OasisNet](../assets/captures/preuves/36_A08_rapport_preliminaire_OasisNet.png)
+
+### 36 — Décision : reprise client progressive
+
+Chérifienne des Mines accepte une remise en service par paliers, avec validation à chaque étape. Cette approche protège la stabilité de la reprise sans bloquer indéfiniment les clients.
+
+![Décision — Reprise progressive client](../assets/captures/decisions/15_reprise_progressive_client_cherifienne.png)
+
 ## Vérification de lecture
 
 - Les événements datés techniquement doivent être cités à partir de la [chronologie technique](FICHE_CHRONOLOGIE_COMPLETE.md#1-chronologie-technique-reconstituée).

@@ -6,6 +6,7 @@ Cette chronologie ne contient que les pièces qualifiées **Preuve**. Les repèr
 
 | Moment | Fait établi | Pièces |
 |---|---|---|
+| J-42 | Le rapport préliminaire d'OasisNet décrit un hameçonnage d'un technicien, l'accès subséquent à sa console d'infogérance et l'extraction possible du secret partagé `svc_oasisnet`. Le périmètre exact reste à confirmer. | A-08 |
 | J-21 à J-1, 02:00–05:00 | Le compte prestataire `svc_oasisnet` ouvre à plusieurs reprises des sessions VPN hors horaires, sans MFA, depuis des IP incompatibles avec le profil OasisNet. Plus de 90 sessions RemoteInteractive sont recensées. | A-02, A-10 |
 | J-11 02:03 | `svc_oasisnet` crée la règle pare-feu `OUT-TEMP-443` de FIN-112 vers HTTPS, avec journalisation désactivée. | A-09 |
 | J-10 à J-1, nuits | Des transferts TLS sortants ont lieu vers `45.137.184.62:443`, d'abord depuis FIN-112 puis FILER-RBT. Volume total : 117,8 Go ; SNI `cdn-sync-eu.storage-blob[.]net`, même empreinte JA3. | A-03 |
@@ -37,7 +38,13 @@ Cette chronologie ne contient que les pièces qualifiées **Preuve**. Les repèr
 - Le phishing A-11 est bien confirmé, mais il ne faut pas le présenter comme la porte d'entrée démontrée de MIRAGE sans preuve de corrélation supplémentaire.
 - Les 300 Go annoncés par SIROCCO ne sont pas confirmés. Le volume objectivé par les journaux proxy est de 117,8 Go.
 
-## Annexe — détails complets des 14 preuves
+## Annexe — détails complets des 15 preuves
+
+### A-08 — Rapport préliminaire OasisNet
+
+- J-42 : un technicien OasisNet ouvre un courriel de « migration messagerie » et saisit ses identifiants sur un domaine sosie.
+- Les identifiants donnent accès à la console d'infogérance ; le secret du compte partagé `svc_oasisnet` peut alors être extrait.
+- L'usage nocturne observé entre J-21 et J-1 recoupe A-02, A-05 et A-10. Le périmètre exact de la compromission OasisNet reste en cours d'investigation.
 
 ### A-02 — Journal VPN FortiGate
 

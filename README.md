@@ -20,7 +20,7 @@
 
 | Incident | Impact confirmé | Données | État du dossier |
 |---|---|---|---|
-| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | Acte III consolidé : **14** preuves · **8** fausses pistes · **10** bruits documentés |
+| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | Acte III consolidé : **15** preuves · **8** fausses pistes · **10** bruits documentés |
 
 **Services touchés :** paie, facturation, ERP et partages de fichiers.<br>
 **Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.
@@ -36,6 +36,7 @@
 
 | Moment | Événement établi | Pièces principales |
 |---|---|---|
+| J-42 | Compromission initiale signalée chez OasisNet après hameçonnage d'un technicien | A-08 |
 | J-21 à J-1 | Utilisation anormale du compte VPN `svc_oasisnet` | A-02, A-10 |
 | J-11 | Création de la règle sortante `OUT-TEMP-443` | A-09 |
 | J-10 à J-1 | Exfiltration de 117,8 Go vers une infrastructure externe | A-03 |
@@ -43,6 +44,7 @@
 | J-1 · 03:12 | Détection et chiffrement MIRAGE sur FIN-112 | A-01, A-04, A-12 |
 | J2 | Publication d'un échantillon sur SIROCCO | A-07 |
 | J3 | Sauvegardes en ligne compromises ; reprise depuis Settat décidée | A-06, A-30 |
+| J3 | Reprise client progressive, avec contrôles à chaque palier | Décision Direction |
 
 > La chronologie complète distingue les faits confirmés, les hypothèses, les fausses pistes et le bruit : [ouvrir la fiche complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md).
 
