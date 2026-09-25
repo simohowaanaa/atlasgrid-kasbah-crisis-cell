@@ -22,6 +22,8 @@ Cette chronologie ne contient que les pièces qualifiées **Preuve**. Les repèr
 | J1 15:28 | Les dépôts BKP-01 et BKP-02 deviennent injoignables. | A-05 |
 | J2 10:00 | L'inventaire confirme 23 serveurs chiffrés sur 40 : paie, facturation, ERP et partages de fichiers sont directement touchés. | A-13 |
 | J2 15:20 | SIROCCO publie un échantillon de données clients et contractuelles, ce qui corrobore une exposition. | A-07 |
+| J3 09:30 | L'inventaire confirme que la sauvegarde en ligne est hors service depuis J-3. La copie LTO-9 de Settat est hors réseau, date de J-42 et constitue la source de reprise indépendante. | A-06 |
+| J3 | L'analyse d'intégrité montre que RP-J-1 est suspect et RP-J-0 infecté par MIRAGE ; les derniers points en ligne ne doivent pas être utilisés pour restaurer. | A-30 |
 
 ## Événement confirmé, mais distinct de la chaîne MIRAGE
 
@@ -31,11 +33,11 @@ Cette chronologie ne contient que les pièces qualifiées **Preuve**. Les repèr
 
 ## Lecture prudente
 
-- La chaîne technique établie est : accès anormaux `svc_oasisnet` → règle de sortie → exfiltration et sabotage des sauvegardes → exécution sur FIN-112 → chiffrement MIRAGE → indisponibilité des sauvegardes et impact métier.
+- La chaîne technique établie est : accès anormaux `svc_oasisnet` → règle de sortie → exfiltration et sabotage des sauvegardes → exécution sur FIN-112 → chiffrement MIRAGE → indisponibilité des sauvegardes et impact métier. La reprise s'appuie ensuite sur la copie air-gap de Settat, les points en ligne récents étant compromis ou suspects.
 - Le phishing A-11 est bien confirmé, mais il ne faut pas le présenter comme la porte d'entrée démontrée de MIRAGE sans preuve de corrélation supplémentaire.
 - Les 300 Go annoncés par SIROCCO ne sont pas confirmés. Le volume objectivé par les journaux proxy est de 117,8 Go.
 
-## Annexe — détails complets des 12 preuves
+## Annexe — détails complets des 14 preuves
 
 ### A-02 — Journal VPN FortiGate
 
@@ -130,3 +132,15 @@ Cette chronologie ne contient que les pièces qualifiées **Preuve**. Les repèr
 - J2 15:20 : capture du site `.onion` SIROCCO LEAKS par le CSIRT, en lecture seule.
 - Le site revendique AtlasGrid, annonce 300 Go et affiche un compte à rebours de 24 h.
 - Lot de preuve : `clients_extrait.csv`, 2 400 lignes avec données clients et contractuelles. Ces données corroborent l'exposition ; le chiffre de 300 Go reste une revendication non confirmée.
+
+### A-06 — Registre des moyens de sauvegarde
+
+- J3 09:30 : la sauvegarde en ligne quotidienne est hors service depuis J-3.
+- Copie trimestrielle LTO-9 : site secondaire de Settat, sans liaison réseau et conservée dans un coffre ignifugé.
+- Dernière copie : J-42, volume 38 To, dernier test de restauration absent, estimation de reprise : 5 à 10 jours.
+
+### A-30 — Analyse d'intégrité Veeam
+
+- RP-J-2 est indiqué sain ; RP-J-1 est suspect car le chargeur `svhost32.exe` est présent.
+- RP-J-0 est infecté par `MIRAGE.A` et une tâche planifiée.
+- La copie air-gap de Settat n'est pas concernée. La restauration depuis les deux derniers points en ligne réintroduirait le rançongiciel.

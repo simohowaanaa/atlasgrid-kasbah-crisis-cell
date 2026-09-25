@@ -1,6 +1,6 @@
 # Mémoire de crise — AtlasGrid / MIRAGE
 
-Dernière consolidation : 24 septembre 2026. Ce dossier résume les actes I et II avant le dernier acte. Il doit être lu avec la **main courante** : une affirmation externe ne doit jamais dépasser les faits confirmés ci-dessous.
+Dernière consolidation : 25 septembre 2026. Ce dossier couvre les actes I, II et III. Il doit être lu avec la **main courante** : une affirmation externe ne doit jamais dépasser les faits confirmés ci-dessous.
 
 ## Situation confirmée
 
@@ -23,6 +23,7 @@ Dernière consolidation : 24 septembre 2026. Ce dossier résume les actes I et I
 | J-1 03:12–03:16 | Exécution de `svhost32.exe` sur FIN-112, neutralisation de Defender, C2, chiffrement `.mirage`, effacement/altération de traces. | A-01, A-04, A-09, A-10, A-12 |
 | J-1 15:28 | BKP-01 et BKP-02 deviennent injoignables. | A-05 |
 | J2 | 23/40 serveurs confirmés chiffrés ; publication d'un échantillon SIROCCO. | A-13, A-07 |
+| J3 | Les sauvegardes en ligne récentes sont suspectes ou infectées ; la reprise est décidée depuis l'air-gap de Settat. | A-06, A-30 |
 
 ## Preuves et qualifications conservées
 
@@ -39,6 +40,8 @@ Dernière consolidation : 24 septembre 2026. Ce dossier résume les actes I et I
 | A-11 | Preuve | Phishing `atlasgrid-it.info` : SPF/DMARC en échec, DKIM absent, demande d'identifiants. |
 | A-12 | Preuve | Chronologie EDR de FIN-112 : désactivation Defender, lecture de 9 412 fichiers, chiffrement et suppression des sauvegardes locales. |
 | A-13 | Preuve | Inventaire de l'impact et priorités métier : 23/40 serveurs chiffrés. |
+| A-06 | Preuve | Inventaire des sauvegardes : l'air-gap LTO-9 de Settat est isolé du réseau, dernière copie J-42. |
+| A-30 | Preuve | Analyse Veeam : les points en ligne récents sont suspect ou infecté ; ils ne doivent pas servir à la reprise. |
 | A-16 | Fausse piste | Pic de trafic dû à l'article Maghreb Éco, visiteurs humains, cache efficace et aucune dégradation d'origine. |
 | A-23 | Preuve | Tentative BEC : domaine sosie, virement de 480 000 MAD demandé ; aucun virement effectué. |
 | A-15 | Fausse piste | Ancien jeton mobile d'un ex-salarié non révoqué ; aucune action privilégiée ni lien avec MIRAGE. |
@@ -64,8 +67,17 @@ Dernière consolidation : 24 septembre 2026. Ce dossier résume les actes I et I
 - **Client Chérifienne des Mines** : réponse prudente et factuelle, sans attester une absence d'exposition non prouvée.
 - **Autorité** : notification transparente envoyée et reçue ; les éléments complémentaires sont demandés sous 72 heures.
 - **OT / SCADA** : service maintenu avec surveillance renforcée ; une nouvelle reconnaissance a été bloquée, aucune session vers le segment industriel n'est établie.
+- **Rançon** : décision de ne pas payer. L'entreprise ne finance pas l'extorsion et ne présume pas d'un déchiffrement ou d'un effacement des données.
+- **Reprise** : restauration depuis l'air-gap de Settat ; priorité au cœur ERP, puis à la paie, à la facturation et aux partages de fichiers.
 
-## Garde-fous pour l'acte final
+## Acte III — Reprise documentée
+
+- **A-06** établit que la copie LTO-9 de Settat est isolée, mais ancienne (J-42) et jamais testée. Le délai complet annoncé est de 5 à 10 jours, avec une perte de données estimée à six semaines.
+- **A-30** écarte les points de restauration en ligne récents : RP-J-1 est suspect et RP-J-0 infecté. Restaurer trop vite réintroduirait MIRAGE.
+- La Direction valide une reprise propre plutôt qu'une reprise rapide : annuaire, base ERP, applicatif ERP, paie, facturation, puis partages de fichiers.
+- La réponse donnée à Maghreb Éco conduit à un article équilibré ; elle confirme qu'une communication factuelle protège mieux la situation qu'un silence ou une promesse non prouvée.
+
+## Garde-fous pour la reprise
 
 1. Ne pas présenter le phishing A-11 comme la cause technique démontrée de l'intrusion : il est confirmé, mais son lien causal avec MIRAGE reste à établir.
 2. Ne pas confirmer le volume de 300 Go, l'identité réelle des opérateurs ou l'exposition d'un client particulier sans recoupement Forensic.

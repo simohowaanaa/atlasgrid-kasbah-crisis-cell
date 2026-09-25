@@ -22,6 +22,12 @@ Le silence aurait été interprété librement par des tiers ; un démenti absol
 
 > « Nous ne laissons pas une revendication d'attaquant devenir la version officielle. Nous répondons vite, avec des faits vérifiés, sans spéculer ni exposer les personnes ou l'enquête. »
 
+## Résultat observé
+
+Le retour de Maghreb Éco indique que l'article publié est resté équilibré et nuancé parce qu'AtlasGrid a répondu. Cela confirme que la communication factuelle a limité le risque d'un récit exclusivement fondé sur la revendication de l'attaquant.
+
+![Retour presse et validation de la reprise](../assets/captures/decisions/14_retour_presse_et_validation_airgap.png)
+
 ## Cadre de conformité et suites
 
 - Le NIST CSF 2.0 prévoit une communication coordonnée avec les parties prenantes pendant l'incident.

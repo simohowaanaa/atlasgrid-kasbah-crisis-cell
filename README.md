@@ -20,10 +20,11 @@
 
 | Incident | Impact confirmé | Données | État du dossier |
 |---|---|---|---|
-| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | **12** preuves · **8** fausses pistes · **7** bruits |
+| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | Acte III consolidé : **14** preuves · **8** fausses pistes · **10** bruits documentés |
 
 **Services touchés :** paie, facturation, ERP et partages de fichiers.<br>
 **Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.
+**Reprise décidée :** refus de payer, restauration depuis l'air-gap de Settat et priorité au cœur ERP.
 
 ## Démarrer ici
 
