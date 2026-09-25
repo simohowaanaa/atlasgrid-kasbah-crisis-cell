@@ -10,7 +10,7 @@
 
 *Exercice organisé par EMSI et CyberSup.*
 
-[Accéder à la chronologie](CHRONOLOGIE_PREUVES.md) · [Voir les preuves](preuves_retenues/) · [Préparer la cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md)
+[Chronologie technique](CHRONOLOGIE_PREUVES.md) · [Chronologie complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md) · [PDF prêt à partager](output/pdf/Chronologie_Incident_AtlasGrid_MIRAGE.pdf) · [Cartographie SI](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md)
 
 </div>
 
@@ -23,14 +23,17 @@
 | Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | Acte III consolidé : **15** preuves · **8** fausses pistes · **10** bruits documentés |
 
 **Services touchés :** paie, facturation, ERP et partages de fichiers.<br>
-**Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.
-**Reprise décidée :** refus de payer, restauration depuis l'air-gap de Settat et priorité au cœur ERP.
+**Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.<br>
+**Reprise décidée :** refus de payer, restauration depuis l'air-gap de Settat, priorité au cœur ERP et remise en service client par paliers.
 
-## Démarrer ici
+> **Position de la cellule.** La cause la plus étayée est la compromission du compte partagé `svc_oasisnet`, après une compromission rapportée chez OasisNet. L'étendue exacte côté prestataire reste à confirmer ; l'attribution de SIROCCO n'est pas établie au-delà de la revendication et de l'échantillon publié.
 
-1. **Comprendre l'incident** — lire le [mémoire de crise](MEMOIRE_INCIDENT_MIRAGE.md).
-2. **Suivre la chaîne d'attaque** — consulter la [chronologie des preuves](CHRONOLOGIE_PREUVES.md).
-3. **Préparer les rendus** — utiliser le [brief de cartographie](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md), les fiches et les décisions ci-dessous.
+## Parcours du jury
+
+1. **Comprendre en deux minutes** — lire le [mémoire de crise](MEMOIRE_INCIDENT_MIRAGE.md).
+2. **Vérifier chaque fait** — suivre la [chronologie des preuves](CHRONOLOGIE_PREUVES.md), puis ouvrir les captures associées.
+3. **Évaluer les choix de crise** — consulter les [décisions documentées](decisions/) : confinement, communication, assurance, non-paiement et reprise.
+4. **Télécharger le rendu** — utiliser le [PDF de chronologie prêt à partager](output/pdf/Chronologie_Incident_AtlasGrid_MIRAGE.pdf).
 
 ## Chaîne d'attaque confirmée
 
@@ -48,17 +51,29 @@
 
 > La chronologie complète distingue les faits confirmés, les hypothèses, les fausses pistes et le bruit : [ouvrir la fiche complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md).
 
+## Décisions finales de reprise
+
+| Décision | Pourquoi elle est défendable | Résultat attendu |
+|---|---|---|
+| Ne pas payer | Aucun déchiffrement ou effacement des données n'est garanti ; une source indépendante existe. | Ne pas financer l'extorsion. |
+| Restaurer depuis Settat | Les points en ligne récents sont suspects ou infectés ; l'air-gap est isolé. | Reprise fiable, mais plus lente. |
+| Prioriser l'ERP | Paie et facturation dépendent du socle ERP. | Remise en service cohérente des métiers. |
+| Rouvrir par paliers | Chaque service est validé avant extension de la reprise. | Stabilité et confiance client maintenues. |
+
+Voir les justifications et les captures dans [les décisions de l'Acte III](decisions/09_ne_pas_payer_reprise_independante.md), [la priorité ERP](decisions/11_priorite_restauration_ERP.md), [le choix de l'air-gap](decisions/12_restauration_airgap_Settat.md) et [la reprise client](decisions/13_reprise_progressive_clients.md).
+
 ## Explorer le dossier
 
 | Besoin | Où aller | Ce que vous y trouverez |
 |---|---|---|
-| Établir les faits | [preuves_retenues/](preuves_retenues/) | 12 fiches de preuve, leurs captures et leur argumentation. |
+| Établir les faits | [preuves_retenues/](preuves_retenues/) | 15 fiches de preuve, leurs captures et leur argumentation. |
 | Comprendre ce qui a été écarté | [fausses_pistes/](fausses_pistes/) · [bruits/](bruits/) | Les signaux étudiés, leur vérification et leur verdict. |
 | Justifier les arbitrages | [decisions/](decisions/) | Les décisions de crise et de reprise, leurs captures et leur base de conformité. |
 | Retracer tout l'exercice | [chronologie_complete/](chronologie_complete/) | Fiche détaillée et galerie des captures. |
 | Construire la cartographie | [cartographie_SI/](cartographie_SI/) | Inventaire, consignes et dépendances du SI. |
 | Travailler par responsabilité | [poles_cellule/](poles_cellule/) | Les six pôles, leurs notes et leurs éléments utiles. |
 | Retrouver une capture | [assets/captures/](assets/captures/) | Source unique des captures, classées par nature. |
+| Partager le rendu | [output/pdf/](output/pdf/) | PDF de chronologie prêt à déposer ou envoyer. |
 
 ## Les 6 pôles de la cellule
 

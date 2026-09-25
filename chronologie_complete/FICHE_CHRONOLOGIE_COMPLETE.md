@@ -6,7 +6,7 @@ Cette fiche reconstitue les événements matériels des **actes I, II et III** d
 
 Deux chronologies sont nécessaires :
 
-1. la chronologie **technique réelle**, reconstituée avec les horodatages relatifs `J-21` à `J2` ;
+1. la chronologie **technique réelle**, reconstituée avec les horodatages relatifs `J-42` à `J3` ;
 2. la chronologie du **déroulé de l'exercice**, dans l'ordre des 89 sections du fil.
 
 Les captures sont intégrées dans la [galerie chronologique](GALERIE_CAPTURES.md). Chaque capture garde son nom normalisé et reste disponible dans la source unique `assets/captures/`.
