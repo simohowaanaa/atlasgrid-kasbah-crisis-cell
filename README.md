@@ -58,7 +58,7 @@ La version complète, sourcée et nuancée est disponible dans la [chronologie c
 | Les choix de la cellule | [Décisions](dossier_incident/decisions/) | 12 décisions documentées : confinement, communication, assurance, reprise et retour des clients. |
 | Les dépendances du SI | [Cartographie](dossier_incident/cartographie/) | Zones, actifs critiques et dépendances utiles à la reprise. |
 | Les rôles de la cellule | [Pôles](dossier_incident/poles/) | Notes de travail des six pôles. |
-| Les documents de restitution | [Livrables jury](livrables_jury/) | PDF classés par usage et source LaTeX du rapport détaillé. |
+| Les documents de restitution | [Livrables jury](livrables_jury/) | PDF classés par usage pour la présentation et la direction. |
 
 ## Décisions finales de reprise
 
