@@ -4,99 +4,74 @@
   <img src="assets/logos/organisateurs.png" alt="EMSI et CyberSup, organisateurs de l'exercice" width="640">
 </p>
 
-# AtlasGrid — Cellule de crise MIRAGE
+# AtlasGrid — dossier de gestion de crise MIRAGE
 
-**Dossier d'incident • Exercice KASBAH • AtlasGrid, entreprise fictive**
+**Dossier d'incident fictif · Exercice KASBAH · AtlasGrid**
 
 *Exercice organisé par EMSI et CyberSup.*
 
-[Chronologie technique](CHRONOLOGIE_PREUVES.md) · [Chronologie complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md) · [PDF prêt à partager](output/pdf/Chronologie_Incident_AtlasGrid_MIRAGE.pdf) · [Cartographie SI](cartographie_SI/BRIEF_CARTOGRAPHIE_JURY.md)
+[Guide du jury](GUIDE_DU_JURY.md) · [Comprendre l'incident](dossier_incident/chronologie/MEMOIRE_INCIDENT_MIRAGE.md) · [Livrables PDF](livrables_jury/README.md)
 
 </div>
 
-> **Cadre pédagogique.** Ce dépôt reconstitue la gestion d'un incident cyber fictif. Il ne contient aucune donnée réelle.
+> **Cadre pédagogique.** Ce dépôt reconstitue un incident cyber fictif. Il ne contient aucune donnée réelle et doit être lu comme un dossier de formation.
 
-## En un regard
+## Commencer ici
 
-| Incident | Impact confirmé | Données | État du dossier |
-|---|---|---|---|
-| Rançongiciel **MIRAGE** | **23 / 40** serveurs chiffrés | **117,8 Go** exfiltrés | Acte III consolidé : **15** preuves · **8** fausses pistes · **10** bruits documentés |
+Ce dépôt est volontairement organisé pour un lecteur non technique.
 
-**Services touchés :** paie, facturation, ERP et partages de fichiers.<br>
-**Exposition :** SIROCCO a publié un échantillon de données clients et contractuelles. La revendication de 300 Go n'est pas confirmée.<br>
-**Reprise décidée :** refus de payer, restauration depuis l'air-gap de Settat, priorité au cœur ERP et remise en service client par paliers.
+1. Lire le [guide du jury](GUIDE_DU_JURY.md) : il explique les mots employés et le parcours recommandé.
+2. Lire le [mémoire d'incident](dossier_incident/chronologie/MEMOIRE_INCIDENT_MIRAGE.md) : la version courte de ce qui s'est passé.
+3. Suivre la [chronologie consolidée](dossier_incident/chronologie/FICHE_CHRONOLOGIE_COMPLETE.md) : chaque étape renvoie à une pièce.
+4. Consulter les [livrables prêts à partager](livrables_jury/README.md) : chronologie, containment, risques, rapport de direction et plan de remédiation.
 
-> **Position de la cellule.** La cause la plus étayée est la compromission du compte partagé `svc_oasisnet`, après une compromission rapportée chez OasisNet. L'étendue exacte côté prestataire reste à confirmer ; l'attribution de SIROCCO n'est pas établie au-delà de la revendication et de l'échantillon publié.
+## En une minute
 
-## Parcours du jury
+| Sujet | Ce qui est établi |
+|---|---|
+| Incident | Le rançongiciel **MIRAGE** a touché l'environnement AtlasGrid. |
+| Impact | **23 des 40 serveurs** sont chiffrés, dont l'ERP, la paie, la facturation et les partages de fichiers. |
+| Données | **117,8 Go** de transferts sortants sont confirmés ; l'affirmation de 300 Go de SIROCCO n'est pas confirmée. |
+| Accès anormal | Le compte prestataire partagé `svc_oasisnet` a été utilisé la nuit, hors de son profil habituel. |
+| Reprise | La cellule refuse de payer, restaure depuis l'air-gap de Settat, remet l'ERP en premier puis rouvre les services clients par paliers. |
 
-1. **Comprendre en deux minutes** — lire le [mémoire de crise](MEMOIRE_INCIDENT_MIRAGE.md).
-2. **Vérifier chaque fait** — suivre la [chronologie des preuves](CHRONOLOGIE_PREUVES.md), puis ouvrir les captures associées.
-3. **Évaluer les choix de crise** — consulter les [décisions documentées](decisions/) : confinement, communication, assurance, non-paiement et reprise.
-4. **Télécharger le rendu** — utiliser le [PDF de chronologie prêt à partager](output/pdf/Chronologie_Incident_AtlasGrid_MIRAGE.pdf).
+> **Point de prudence.** Le rapport OasisNet étaye une compromission amont possible, mais son périmètre exact reste à confirmer. SIROCCO a publié un échantillon de données, sans qu'une identité ou une localisation du groupe puisse être démontrée par le dossier.
 
-## Chaîne d'attaque confirmée
+## La chaîne d'incident, en langage simple
 
-| Moment | Événement établi | Pièces principales |
+1. Un accès prestataire (`svc_oasisnet`) est utilisé de façon anormale.
+2. Une règle réseau temporaire ouvre une sortie non contrôlée.
+3. Des données sont transférées vers une infrastructure externe.
+4. Les mécanismes de sauvegarde en ligne sont dégradés avant le chiffrement.
+5. MIRAGE se lance sur FIN-112, chiffre des systèmes et détruit des possibilités de restauration locale.
+6. La cellule isole, communique, refuse la rançon, puis redémarre depuis une copie hors ligne vérifiée.
+
+La version complète, sourcée et nuancée est disponible dans la [chronologie consolidée](dossier_incident/chronologie/FICHE_CHRONOLOGIE_COMPLETE.md).
+
+## Où trouver l'information
+
+| Si vous cherchez… | Ouvrez… | Vous y trouverez… |
 |---|---|---|
-| J-42 | Compromission initiale signalée chez OasisNet après hameçonnage d'un technicien | A-08 |
-| J-21 à J-1 | Utilisation anormale du compte VPN `svc_oasisnet` | A-02, A-10 |
-| J-11 | Création de la règle sortante `OUT-TEMP-443` | A-09 |
-| J-10 à J-1 | Exfiltration de 117,8 Go vers une infrastructure externe | A-03 |
-| J-3 | Sabotage de la rétention des sauvegardes | A-05 |
-| J-1 · 03:12 | Détection et chiffrement MIRAGE sur FIN-112 | A-01, A-04, A-12 |
-| J2 | Publication d'un échantillon sur SIROCCO | A-07 |
-| J3 | Sauvegardes en ligne compromises ; reprise depuis Settat décidée | A-06, A-30 |
-| J3 | Reprise client progressive, avec contrôles à chaque palier | Décision Direction |
-
-> La chronologie complète distingue les faits confirmés, les hypothèses, les fausses pistes et le bruit : [ouvrir la fiche complète](chronologie_complete/FICHE_CHRONOLOGIE_COMPLETE.md).
+| Le récit court de l'incident | [Chronologie](dossier_incident/chronologie/) | Mémoire, chronologie technique, chronologie complète et galerie de captures. |
+| Les faits établis | [Preuves](dossier_incident/preuves/) | 15 fiches de preuve, les captures associées et les limites de chaque constat. |
+| Les éléments écartés | [Triage](dossier_incident/triage/) | Fausses pistes et bruits, avec la raison de leur classement. |
+| Les choix de la cellule | [Décisions](dossier_incident/decisions/) | 12 décisions documentées : confinement, communication, assurance, reprise et retour des clients. |
+| Les dépendances du SI | [Cartographie](dossier_incident/cartographie/) | Zones, actifs critiques et dépendances utiles à la reprise. |
+| Les rôles de la cellule | [Pôles](dossier_incident/poles/) | Notes de travail des six pôles. |
+| Les documents de restitution | [Livrables jury](livrables_jury/) | PDF classés par usage et source LaTeX du rapport détaillé. |
 
 ## Décisions finales de reprise
 
-| Décision | Pourquoi elle est défendable | Résultat attendu |
+| Décision | Justification | Référence |
 |---|---|---|
-| Ne pas payer | Aucun déchiffrement ou effacement des données n'est garanti ; une source indépendante existe. | Ne pas financer l'extorsion. |
-| Restaurer depuis Settat | Les points en ligne récents sont suspects ou infectés ; l'air-gap est isolé. | Reprise fiable, mais plus lente. |
-| Prioriser l'ERP | Paie et facturation dépendent du socle ERP. | Remise en service cohérente des métiers. |
-| Rouvrir par paliers | Chaque service est validé avant extension de la reprise. | Stabilité et confiance client maintenues. |
+| Ne pas payer | Aucun déchiffrement ni effacement des données n'est garanti ; une copie indépendante existe. | [Décision 09](dossier_incident/decisions/09_ne_pas_payer_reprise_independante.md) |
+| Restaurer depuis Settat | Les sauvegardes en ligne récentes sont suspectes ou infectées ; l'air-gap est déconnecté. | [Décision 12](dossier_incident/decisions/12_restauration_airgap_Settat.md) |
+| Prioriser l'ERP | La paie et la facturation dépendent du socle ERP. | [Décision 11](dossier_incident/decisions/11_priorite_restauration_ERP.md) |
+| Rouvrir par paliers | Chaque étape est validée avant d'étendre la remise en service. | [Décision 13](dossier_incident/decisions/13_reprise_progressive_clients.md) |
 
-Voir les justifications et les captures dans [les décisions de l'Acte III](decisions/09_ne_pas_payer_reprise_independante.md), [la priorité ERP](decisions/11_priorite_restauration_ERP.md), [le choix de l'air-gap](decisions/12_restauration_airgap_Settat.md) et [la reprise client](decisions/13_reprise_progressive_clients.md).
+## Règle de lecture du dossier
 
-## Explorer le dossier
-
-| Besoin | Où aller | Ce que vous y trouverez |
-|---|---|---|
-| Établir les faits | [preuves_retenues/](preuves_retenues/) | 15 fiches de preuve, leurs captures et leur argumentation. |
-| Comprendre ce qui a été écarté | [fausses_pistes/](fausses_pistes/) · [bruits/](bruits/) | Les signaux étudiés, leur vérification et leur verdict. |
-| Justifier les arbitrages | [decisions/](decisions/) | Les décisions de crise et de reprise, leurs captures et leur base de conformité. |
-| Retracer tout l'exercice | [chronologie_complete/](chronologie_complete/) | Fiche détaillée et galerie des captures. |
-| Construire la cartographie | [cartographie_SI/](cartographie_SI/) | Inventaire, consignes et dépendances du SI. |
-| Travailler par responsabilité | [poles_cellule/](poles_cellule/) | Les six pôles, leurs notes et leurs éléments utiles. |
-| Retrouver une capture | [assets/captures/](assets/captures/) | Source unique des captures, classées par nature. |
-| Partager le rendu | [output/pdf/](output/pdf/) | PDF de chronologie prêt à déposer ou envoyer. |
-
-## Les 6 pôles de la cellule
-
-| Pôle | Responsabilité | Livrable attendu |
-|---|---|---|
-| SOC / Détection | Qualifier les signaux et tenir la main courante | Chronologie de l'incident |
-| Forensic | Reconstituer le mode opératoire à partir des traces | Hypothèses d'attaque argumentées |
-| Risque / Conformité | Évaluer les risques et obligations | Tableau de risques |
-| Continuité d'activité | Préserver les services critiques et organiser la reprise | Plan de containment |
-| Communication | Gérer les messages internes, clients et presse | Communiqué et réponses |
-| Direction | Arbitrer, prioriser et porter la restitution | Rapport d'incident et plan 30 / 60 / 90 jours |
-
-## Livrables du jury
-
-- **Cartographie simplifiée du SI** : zones, dépendances, actifs critiques et éléments affectés.
-- **Chronologie d'incident** : date, heure, pièce A-xx, qualification et décision associée.
-- **Communiqué de crise** : une page, uniquement à partir de faits confirmés.
-- **Plan 30 / 60 / 90 jours** : action, responsable, échéance, risque couvert et indicateur.
-- **Présentation finale** : 10 à 15 minutes, portée par les six pôles sous la forme d'un rapport d'incident.
-
-## Règle essentielle
-
-Chaque affirmation doit renvoyer à une pièce. Une **preuve**, une **hypothèse**, une **fausse piste** et un **bruit** sont quatre statuts différents : ils ne doivent jamais être confondus.
+Chaque affirmation renvoie à une pièce. Les statuts ne se confondent pas : une **preuve** établit un fait, une **fausse piste** a été investiguée puis réfutée, et un **bruit** est un signal réel mais sans lien démontré avec MIRAGE.
 
 ---
 
